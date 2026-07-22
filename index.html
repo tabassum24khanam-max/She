@@ -1,0 +1,1112 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>SHE — Saudi House of Expertise | Supply & Procurement Since 1971</title>
+<meta name="description" content="Saudi House of Expertise (SHE) — a Saudi-owned single-source supply & procurement partner since 1971. Thirteen product lines, nationwide, from one point of contact.">
+<meta name="theme-color" content="#0A4D28">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 40'%3E%3Crect width='48' height='40' fill='%230A4D28'/%3E%3Cg fill='none' stroke='%231BA84A' stroke-width='3' stroke-linecap='round'%3E%3Cpath d='M8 34V24a4 4 0 018 0v10'/%3E%3Cpath d='M20 34V18a5 5 0 0110 0v16'/%3E%3Cpath d='M33 34V11a5.5 5.5 0 0111 0v23'/%3E%3C/g%3E%3C/svg%3E">
+<!-- Open Graph / Twitter -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="SHE — Saudi House of Expertise | Supply & Procurement Since 1971">
+<meta property="og:description" content="A Saudi-owned single-source supply & procurement partner since 1971. Thirteen product lines, nationwide, from one point of contact.">
+<meta property="og:image" content="img/hero.jpg">
+<meta property="og:site_name" content="Saudi House of Expertise">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="SHE — Saudi House of Expertise">
+<meta name="twitter:description" content="Single-source supply & procurement partner to the Kingdom since 1971.">
+<meta name="twitter:image" content="img/hero.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&family=Newsreader:ital,opt@1,7..72&display=swap" rel="stylesheet">
+<style>
+/* ============ TOKENS ============ */
+:root{
+  --green:#0E7A3B;
+  --green-deep:#0A4D28;
+  --green-forest:#062E18;
+  --green-bright:#1BA84A;
+  --lime:#8CC63F;
+  --paper:#F5F7F3;
+  --paper-2:#EAEEE6;
+  --ink:#14211A;
+  --ink-soft:#5B6B60;
+  --line:rgba(14,40,24,.12);
+  --gold:#C7A34A;
+  --white:#ffffff;
+  --maxw:1240px;
+  --pad:clamp(20px,5vw,80px);
+  --r:16px;
+  --ease-in:cubic-bezier(.16,1,.3,1);
+  --ease-hover:cubic-bezier(.2,.7,.2,1);
+  --font-head:'Sora',system-ui,sans-serif;
+  --font-body:'Inter',system-ui,sans-serif;
+  --font-serif:'Newsreader',Georgia,serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{
+  font-family:var(--font-body);
+  color:var(--ink);
+  background:var(--paper);
+  line-height:1.6;
+  overflow-x:hidden;
+  -webkit-font-smoothing:antialiased;
+  text-rendering:optimizeLegibility;
+}
+body.ar{font-family:'IBM Plex Sans Arabic',var(--font-body);}
+body.ar .en-only{display:none}
+body:not(.ar) .ar-only{display:none}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+button{font-family:inherit;cursor:pointer;border:0;background:none;color:inherit}
+::selection{background:var(--green-bright);color:#fff}
+/* grain */
+body::after{
+  content:"";position:fixed;inset:0;pointer-events:none;z-index:9998;opacity:.035;mix-blend-mode:multiply;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+/* ============ TYPE ============ */
+.eyebrow{
+  font-family:var(--font-head);font-weight:600;font-size:.74rem;letter-spacing:.32em;
+  text-transform:uppercase;color:var(--green);display:inline-flex;align-items:center;gap:.7em;
+}
+body.ar .eyebrow{letter-spacing:.08em}
+.eyebrow::before{content:"";width:26px;height:1px;background:var(--green-bright)}
+h1,h2,h3,h4{font-family:var(--font-head);font-weight:700;line-height:1.05;letter-spacing:-.02em;color:var(--green-forest)}
+body.ar h1,body.ar h2,body.ar h3,body.ar h4{letter-spacing:0;line-height:1.3}
+.h-xl{font-size:clamp(40px,6.4vw,92px);font-weight:800}
+.h-lg{font-size:clamp(30px,4.4vw,56px)}
+.h-md{font-size:clamp(22px,2.6vw,34px)}
+.lead{font-size:clamp(17px,1.5vw,21px);color:var(--ink-soft);line-height:1.65}
+.section{padding:clamp(64px,9vw,132px) var(--pad);max-width:var(--maxw);margin-inline:auto}
+.section-wide{padding:clamp(64px,9vw,132px) 0}
+
+/* ============ BUTTONS ============ */
+.btn{
+  position:relative;display:inline-flex;align-items:center;gap:.6em;
+  font-family:var(--font-head);font-weight:600;font-size:.98rem;
+  padding:15px 26px;border-radius:100px;overflow:hidden;
+  transition:transform .25s var(--ease-hover),box-shadow .3s;
+  will-change:transform;isolation:isolate;
+}
+.btn svg{width:17px;height:17px;flex:none}
+.btn-primary{background:var(--green-bright);color:#fff;box-shadow:0 10px 30px -12px rgba(27,168,74,.7)}
+.btn-primary::before{content:"";position:absolute;inset:0;background:var(--green-deep);transform:translateX(-101%);transition:transform .4s var(--ease-hover);z-index:-1}
+body.ar .btn-primary::before{transform:translateX(101%)}
+.btn-primary:hover::before{transform:translateX(0)}
+.btn-primary:hover{transform:translateY(-2px)}
+.btn-ghost{border:1.5px solid var(--line);color:var(--green-forest);background:rgba(255,255,255,.5)}
+.btn-ghost:hover{border-color:var(--green);background:#fff;transform:translateY(-2px)}
+.btn:active{transform:scale(.97)}
+.btn.on-dark.btn-ghost{border-color:rgba(255,255,255,.3);color:#fff;background:rgba(255,255,255,.06)}
+.btn.on-dark.btn-ghost:hover{border-color:#fff;background:rgba(255,255,255,.14)}
+
+/* ============ LOADER ============ */
+#loader{
+  position:fixed;inset:0;z-index:10000;background:var(--green-forest);
+  display:flex;flex-direction:column;align-items:center;justify-content:center;gap:22px;
+  transition:opacity .7s var(--ease-in),visibility .7s;
+}
+#loader.hide{opacity:0;visibility:hidden}
+#loader.gone{display:none}
+#loader svg{width:96px;height:80px}
+#loader .arch{
+  fill:none;stroke:var(--green-bright);stroke-width:3.4;stroke-linecap:round;
+  stroke-dasharray:120;stroke-dashoffset:120;animation:draw 1.5s var(--ease-in) forwards;
+}
+#loader .arch:nth-child(2){animation-delay:.14s}
+#loader .arch:nth-child(3){animation-delay:.28s}
+@keyframes draw{to{stroke-dashoffset:0}}
+#loader .ld-word{font-family:var(--font-head);font-weight:800;letter-spacing:.5em;color:#fff;font-size:1.1rem;opacity:0;animation:fadeUp .6s .5s var(--ease-in) forwards;padding-inline-start:.5em}
+#loader .ld-sub{font-size:.7rem;letter-spacing:.25em;color:rgba(255,255,255,.5);text-transform:uppercase;opacity:0;animation:fadeUp .6s .7s var(--ease-in) forwards}
+@keyframes fadeUp{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
+
+/* ============ NAV ============ */
+header#nav{
+  position:fixed;top:0;inset-inline:0;z-index:900;
+  display:flex;align-items:center;justify-content:space-between;gap:20px;
+  padding:14px var(--pad);transition:background .4s,box-shadow .4s,padding .4s,border-color .4s;
+  border-bottom:1px solid transparent;
+}
+header#nav.scrolled{background:rgba(245,247,243,.86);backdrop-filter:saturate(1.4) blur(14px);border-color:var(--line);padding-top:10px;padding-bottom:10px}
+.brand{display:flex;align-items:center;gap:12px;color:#fff;transition:color .4s}
+header#nav.scrolled .brand{color:var(--green-forest)}
+.brand .mark{width:40px;height:34px;flex:none}
+.brand .mark path{stroke:var(--green-bright);stroke-width:3.2;fill:none;stroke-linecap:round}
+header#nav.scrolled .brand .mark path{stroke:var(--green)}
+.brand .wm{display:flex;flex-direction:column;line-height:1}
+.brand .wm b{font-family:var(--font-head);font-weight:800;font-size:1.28rem;letter-spacing:.14em}
+.brand .wm span{font-size:.6rem;letter-spacing:.12em;opacity:.72;margin-top:3px;text-transform:uppercase}
+.brand .wm .ar-name{font-family:'IBM Plex Sans Arabic';letter-spacing:0;font-size:.66rem}
+.nav-links{display:flex;align-items:center;gap:30px}
+.nav-links a{font-family:var(--font-head);font-weight:500;font-size:.94rem;color:rgba(255,255,255,.9);position:relative;padding:4px 0;transition:color .3s}
+header#nav.scrolled .nav-links a{color:var(--ink)}
+.nav-links a::after{content:"";position:absolute;bottom:-2px;inset-inline-start:0;width:0;height:2px;background:var(--green-bright);transition:width .3s var(--ease-hover)}
+.nav-links a:hover::after{width:100%}
+.nav-right{display:flex;align-items:center;gap:14px}
+.lang-toggle{
+  display:inline-flex;align-items:center;gap:6px;font-family:var(--font-head);font-weight:600;font-size:.82rem;
+  border:1.5px solid rgba(255,255,255,.35);color:#fff;border-radius:100px;padding:8px 14px;transition:.3s;
+}
+header#nav.scrolled .lang-toggle{border-color:var(--line);color:var(--green-forest)}
+.lang-toggle:hover{border-color:var(--green-bright);color:var(--green-bright)}
+.lang-toggle .cur{color:var(--green-bright)}
+.nav-cta{padding:11px 20px;font-size:.9rem}
+.burger{display:none;width:44px;height:44px;flex-direction:column;justify-content:center;gap:5px;align-items:center}
+.burger span{width:24px;height:2px;background:#fff;transition:.3s;border-radius:2px}
+header#nav.scrolled .burger span{background:var(--green-forest)}
+
+/* mobile overlay */
+#mmenu{
+  position:fixed;inset:0;z-index:950;background:var(--green-forest);
+  display:flex;flex-direction:column;justify-content:center;gap:8px;padding:80px var(--pad) 40px;
+  transform:translateX(100%);transition:transform .5s var(--ease-in);visibility:hidden;
+}
+body.ar #mmenu{transform:translateX(-100%)}
+#mmenu.open{transform:translateX(0);visibility:visible}
+#mmenu a{font-family:var(--font-head);font-weight:600;font-size:clamp(1.7rem,7vw,2.4rem);color:#fff;padding:10px 0;border-bottom:1px solid rgba(255,255,255,.1)}
+#mmenu a small{display:block;font-family:'IBM Plex Sans Arabic';font-size:.9rem;color:var(--green-bright);font-weight:500}
+#mmenu .m-foot{margin-top:26px;display:flex;flex-wrap:wrap;gap:14px;align-items:center}
+#mclose{position:absolute;top:22px;inset-inline-end:var(--pad);width:44px;height:44px;color:#fff;font-size:2rem}
+
+/* ============ HERO ============ */
+#top{position:relative;min-height:100svh;display:flex;align-items:center;padding:110px var(--pad) 60px;overflow:hidden;isolation:isolate}
+.hero-bg{position:absolute;inset:0;z-index:-2;overflow:hidden}
+.hero-bg img{width:100%;height:100%;object-fit:cover;position:relative;z-index:1;animation:heroZoom 18s ease-out both}
+@keyframes heroZoom{from{transform:scale(1.12)}to{transform:scale(1)}}
+.hero-scrim{position:absolute;inset:0;z-index:-1;
+  background:
+    linear-gradient(105deg,rgba(6,46,24,.94) 0%,rgba(10,77,40,.78) 42%,rgba(6,46,24,.35) 100%),
+    radial-gradient(120% 90% at 100% 100%,rgba(27,168,74,.28),transparent 60%);
+}
+body.ar .hero-scrim{background:linear-gradient(255deg,rgba(6,46,24,.94) 0%,rgba(10,77,40,.78) 42%,rgba(6,46,24,.35) 100%),radial-gradient(120% 90% at 0% 100%,rgba(27,168,74,.28),transparent 60%)}
+.hero-inner{max-width:900px;color:#fff}
+.hero-inner .eyebrow{color:#fff}
+.hero-inner .eyebrow::before{background:var(--green-bright)}
+.hero-inner h1{color:#fff;margin:20px 0 22px;max-width:16ch}
+.hero-inner h1 em{font-family:var(--font-serif);font-style:italic;font-weight:400;color:var(--lime)}
+.hero-sub{font-size:clamp(16px,1.6vw,20px);color:rgba(255,255,255,.86);max-width:52ch;line-height:1.6}
+.hero-cta{display:flex;flex-wrap:wrap;gap:14px;margin-top:34px}
+.hero-anim{opacity:0;transform:translateY(26px);animation:fadeUp .9s var(--ease-in) forwards}
+.hero-anim.d1{animation-delay:.15s}.hero-anim.d2{animation-delay:.3s}.hero-anim.d3{animation-delay:.45s}.hero-anim.d4{animation-delay:.6s}
+.trust-strip{display:flex;flex-wrap:wrap;gap:10px 26px;margin-top:40px;padding-top:26px;border-top:1px solid rgba(255,255,255,.16)}
+.trust-strip span{display:inline-flex;align-items:center;gap:9px;font-family:var(--font-head);font-weight:500;font-size:.86rem;color:rgba(255,255,255,.82);letter-spacing:.02em}
+.trust-strip span::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--green-bright)}
+.scroll-hint{position:absolute;bottom:22px;inset-inline-start:50%;transform:translateX(-50%);color:rgba(255,255,255,.5);font-size:.68rem;letter-spacing:.3em;text-transform:uppercase;display:flex;flex-direction:column;align-items:center;gap:8px}
+.scroll-hint i{width:1px;height:34px;background:linear-gradient(rgba(255,255,255,.6),transparent);animation:scrollpulse 2s infinite}
+@keyframes scrollpulse{0%,100%{opacity:.3;transform:scaleY(.6)}50%{opacity:1;transform:scaleY(1)}}
+
+/* ============ STATS ============ */
+#stats{background:var(--green-forest);color:#fff;position:relative;overflow:hidden}
+#stats .arch-water{position:absolute;inset-inline-end:-40px;top:-30px;width:280px;opacity:.06}
+.stats-grid{max-width:var(--maxw);margin-inline:auto;padding:clamp(40px,5vw,64px) var(--pad);display:grid;grid-template-columns:repeat(4,1fr);gap:30px;position:relative}
+.stat{position:relative;padding-inline-start:22px}
+.stat::before{content:"";position:absolute;inset-inline-start:0;top:6px;bottom:6px;width:2px;background:linear-gradient(var(--green-bright),transparent)}
+.stat b{font-family:var(--font-head);font-weight:800;font-size:clamp(34px,4.6vw,58px);display:block;line-height:1;letter-spacing:-.02em}
+.stat b .plus{color:var(--green-bright)}
+.stat span{display:block;margin-top:10px;font-size:.82rem;color:rgba(255,255,255,.66);letter-spacing:.04em;text-transform:uppercase;font-family:var(--font-head);font-weight:500}
+
+/* ============ REVEAL ============ */
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .7s var(--ease-in),transform .7s var(--ease-in)}
+.reveal.vis{opacity:1;transform:none}
+.reveal.d1{transition-delay:.08s}.reveal.d2{transition-delay:.16s}.reveal.d3{transition-delay:.24s}
+
+/* ============ ABOUT / TIMELINE ============ */
+.about-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(36px,5vw,72px);align-items:center}
+.about-copy p{margin-top:18px;color:var(--ink-soft);font-size:1.03rem}
+.about-copy .lead{color:var(--ink);font-weight:500}
+.expert-tags{display:flex;flex-wrap:wrap;gap:10px;margin-top:26px}
+.expert-tags .tag{font-family:var(--font-head);font-weight:500;font-size:.82rem;padding:8px 15px;border:1px solid var(--line);border-radius:100px;background:#fff;color:var(--green-deep)}
+.about-media{position:relative}
+.about-media .frame{position:relative;border-radius:var(--r);overflow:hidden;aspect-ratio:4/5;box-shadow:0 40px 80px -40px rgba(6,46,24,.5)}
+.about-media .frame img{width:100%;height:100%;object-fit:cover;position:relative;z-index:1}
+.about-media .badge{position:absolute;inset-block-end:-26px;inset-inline-start:-26px;background:var(--green-bright);color:#fff;border-radius:14px;padding:20px 24px;box-shadow:0 24px 50px -20px rgba(27,168,74,.7)}
+.about-media .badge b{font-family:var(--font-head);font-size:2.4rem;font-weight:800;line-height:1;display:block}
+.about-media .badge span{font-size:.76rem;letter-spacing:.1em;text-transform:uppercase;opacity:.9}
+
+.timeline{margin-top:clamp(56px,7vw,90px)}
+.tl-track{position:relative;display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:40px}
+.tl-track::before{content:"";position:absolute;top:9px;inset-inline:6%;height:2px;background:linear-gradient(90deg,var(--green-bright),var(--line))}
+body.ar .tl-track::before{background:linear-gradient(270deg,var(--green-bright),var(--line))}
+.tl-item{position:relative;padding-top:34px}
+.tl-item .dot{position:absolute;top:2px;inset-inline-start:0;width:18px;height:18px;border-radius:50%;background:var(--paper);border:4px solid var(--green-bright);box-shadow:0 0 0 5px var(--paper)}
+.tl-item .yr{font-family:var(--font-head);font-weight:800;color:var(--green);font-size:1.5rem;letter-spacing:.02em}
+.tl-item h4{font-size:1.08rem;margin:6px 0 8px}
+.tl-item p{color:var(--ink-soft);font-size:.94rem}
+.tl-item.heritage-note .yr{color:var(--gold)}
+.tl-item.heritage-note .dot{border-color:var(--gold)}
+
+/* ============ SUPPLY ============ */
+#supply{background:var(--paper-2)}
+.supply-head{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap;margin-bottom:44px}
+.supply-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.supply-card{
+  position:relative;background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:26px 24px 22px;
+  transition:transform .4s var(--ease-hover),box-shadow .4s,border-color .4s;cursor:pointer;overflow:hidden;
+}
+.supply-card::before{content:"";position:absolute;inset:0;background:linear-gradient(160deg,rgba(27,168,74,.05),transparent 60%);opacity:0;transition:opacity .4s}
+.supply-card:hover{transform:translateY(-5px);box-shadow:0 30px 60px -30px rgba(6,46,24,.4);border-color:transparent}
+.supply-card:hover::before{opacity:1}
+.supply-card .num{font-family:var(--font-head);font-weight:700;font-size:.78rem;color:var(--green-bright);letter-spacing:.12em}
+.supply-card .ico{width:46px;height:46px;margin:14px 0 16px;color:var(--green)}
+.supply-card .ico svg{width:100%;height:100%;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+.supply-card h3{font-size:1.16rem;line-height:1.2}
+.supply-card .t-ar{font-family:'IBM Plex Sans Arabic';font-size:.92rem;color:var(--green);font-weight:500;margin-top:3px}
+body.ar .supply-card h3{font-family:'IBM Plex Sans Arabic'}
+body.ar .supply-card .t-ar{font-family:var(--font-head);letter-spacing:.02em}
+.supply-card p{color:var(--ink-soft);font-size:.92rem;margin-top:9px}
+.supply-card .subs{display:flex;flex-wrap:wrap;gap:6px;margin-top:14px;max-height:0;opacity:0;overflow:hidden;transition:max-height .45s var(--ease-in),opacity .35s,margin-top .35s}
+.supply-card:hover .subs,.supply-card.open .subs{max-height:140px;opacity:1}
+.supply-card .subs span{font-size:.72rem;padding:4px 10px;background:var(--paper);border:1px solid var(--line);border-radius:100px;color:var(--green-deep)}
+.supply-card .arch-tab{position:absolute;inset-inline-end:16px;top:20px;width:22px;opacity:.15;transition:opacity .4s}
+.supply-card:hover .arch-tab{opacity:.4}
+
+/* ============ PROCESS ============ */
+.proc-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin-top:52px;position:relative}
+.proc-step{position:relative;padding-top:8px}
+.proc-step .n{font-family:var(--font-head);font-weight:800;font-size:3.4rem;color:transparent;-webkit-text-stroke:1.4px var(--green-bright);line-height:.9;opacity:.9}
+.proc-step .arch-con{position:absolute;top:26px;inset-inline-end:-10px;width:32px;color:var(--line)}
+.proc-step:last-child .arch-con{display:none}
+.proc-step h4{font-size:1.16rem;margin:16px 0 8px}
+.proc-step p{color:var(--ink-soft);font-size:.93rem}
+
+/* ============ SECTORS ============ */
+#sectors{background:var(--green-forest);color:#fff;position:relative;overflow:hidden}
+#sectors .eyebrow{color:var(--green-bright)}
+#sectors .eyebrow::before{background:var(--green-bright)}
+#sectors h2{color:#fff}
+.sector-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:48px}
+.sector{position:relative;border-radius:14px;overflow:hidden;aspect-ratio:4/3;border:1px solid rgba(255,255,255,.1)}
+.sector img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:saturate(.7) brightness(.7);transition:transform .6s var(--ease-hover),filter .5s}
+.sector::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(6,46,24,.9),rgba(6,46,24,.15) 70%)}
+.sector:hover img{transform:scale(1.08);filter:saturate(1) brightness(.8)}
+.sector .lbl{position:absolute;inset-block-end:0;inset-inline-start:0;z-index:2;padding:16px;font-family:var(--font-head);font-weight:600;font-size:1rem}
+.sector .lbl small{display:block;font-family:'IBM Plex Sans Arabic';font-weight:400;font-size:.8rem;color:var(--green-bright);margin-top:2px}
+body.ar .sector .lbl{font-family:'IBM Plex Sans Arabic'}
+
+/* ============ WHY ============ */
+.why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:48px}
+.why-card{padding:30px 26px;border:1px solid var(--line);border-radius:var(--r);background:#fff;transition:transform .4s var(--ease-hover),box-shadow .4s}
+.why-card:hover{transform:translateY(-4px);box-shadow:0 24px 50px -30px rgba(6,46,24,.35)}
+.why-card .wn{font-family:var(--font-head);font-weight:700;color:var(--green-bright);font-size:.8rem;letter-spacing:.12em}
+.why-card h4{font-size:1.2rem;margin:14px 0 10px}
+.why-card p{color:var(--ink-soft);font-size:.94rem}
+
+/* ============ MISSION / QUOTE ============ */
+#mission{position:relative;color:#fff;background:linear-gradient(150deg,var(--green-deep),var(--green-forest));overflow:hidden}
+#mission .authority-img{position:absolute;inset:0;z-index:0;opacity:.14}
+#mission .authority-img img{width:100%;height:100%;object-fit:cover}
+#mission .inner{position:relative;z-index:2;max-width:var(--maxw);margin-inline:auto;padding:clamp(72px,9vw,130px) var(--pad)}
+#mission .eyebrow{color:var(--green-bright)}#mission .eyebrow::before{background:var(--green-bright)}
+#mission h2{color:#fff}
+.mvv{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin:44px 0 56px}
+.mvv .card{padding:26px;border:1px solid rgba(255,255,255,.14);border-radius:14px;background:rgba(255,255,255,.03)}
+.mvv .card h4{color:#fff;font-size:1.14rem;margin-bottom:12px;display:flex;align-items:center;gap:10px}
+.mvv .card h4 .d{width:8px;height:8px;background:var(--green-bright);border-radius:2px;transform:rotate(45deg)}
+.mvv .card ul{list-style:none;display:flex;flex-direction:column;gap:9px}
+.mvv .card li{font-size:.92rem;color:rgba(255,255,255,.8);padding-inline-start:18px;position:relative}
+.mvv .card li::before{content:"";position:absolute;inset-inline-start:0;top:9px;width:7px;height:7px;border-top:1.5px solid var(--green-bright);border-inline-end:1.5px solid var(--green-bright);transform:rotate(45deg)}
+body.ar .mvv .card li::before{transform:rotate(-135deg)}
+.pullquote{max-width:900px;margin-inline:auto;text-align:center;padding-top:20px;border-top:1px solid rgba(255,255,255,.14)}
+.pullquote blockquote{font-family:var(--font-serif);font-style:italic;font-size:clamp(19px,2.3vw,30px);line-height:1.45;color:#fff}
+body.ar .pullquote blockquote{font-family:'IBM Plex Sans Arabic';font-style:normal;line-height:1.7}
+.pullquote .qm{font-family:var(--font-serif);font-size:4rem;color:var(--green-bright);line-height:0;display:block;height:30px}
+
+/* ============ PARTNERS ============ */
+.partner-row{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;margin-top:40px}
+.partner-slot{aspect-ratio:16/8;border:1px dashed var(--line);border-radius:12px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;color:var(--ink-soft);background:#fff;transition:.3s}
+.partner-slot:hover{border-color:var(--green-bright);color:var(--green)}
+.partner-slot svg{width:26px;height:26px;opacity:.5;fill:none;stroke:currentColor;stroke-width:1.4}
+.partner-slot span{font-size:.68rem;letter-spacing:.1em;text-transform:uppercase}
+
+/* ============ RFQ + CONTACT ============ */
+#contact{background:var(--paper-2)}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(30px,4vw,56px);align-items:start}
+.rfq{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:clamp(26px,3vw,40px);box-shadow:0 30px 70px -50px rgba(6,46,24,.5)}
+.rfq h3{font-size:1.5rem;margin-bottom:6px}
+.rfq .sub{color:var(--ink-soft);font-size:.94rem;margin-bottom:24px}
+.field{margin-bottom:16px}
+.field label{display:block;font-family:var(--font-head);font-weight:500;font-size:.82rem;margin-bottom:7px;color:var(--green-deep)}
+.field label .req{color:var(--green-bright)}
+.field input,.field select,.field textarea{
+  width:100%;padding:13px 15px;border:1.5px solid var(--line);border-radius:12px;background:var(--paper);
+  font-family:var(--font-body);font-size:.95rem;color:var(--ink);transition:border-color .3s,box-shadow .3s;
+}
+body.ar .field input,body.ar .field select,body.ar .field textarea{font-family:'IBM Plex Sans Arabic'}
+.field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--green-bright);box-shadow:0 0 0 4px rgba(27,168,74,.12)}
+.field textarea{resize:vertical;min-height:100px}
+.field.two{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.rfq-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:8px}
+.form-note{font-size:.78rem;color:var(--ink-soft);margin-top:14px;line-height:1.5}
+.rfq-success{display:none;text-align:center;padding:30px 10px}
+.rfq-success.show{display:block;animation:fadeUp .5s var(--ease-in)}
+.rfq-success .check{width:64px;height:64px;margin:0 auto 18px;border-radius:50%;background:rgba(27,168,74,.12);display:flex;align-items:center;justify-content:center}
+.rfq-success .check svg{width:30px;height:30px;stroke:var(--green-bright);stroke-width:2.4;fill:none;stroke-linecap:round;stroke-linejoin:round}
+.rfq-success h3{color:var(--green);margin-bottom:8px}
+.rfq-success p{color:var(--ink-soft);font-size:.94rem}
+.alt-contact{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px;padding-top:20px;border-top:1px solid var(--line)}
+.alt-contact a{display:inline-flex;align-items:center;gap:8px;font-family:var(--font-head);font-weight:600;font-size:.86rem;padding:10px 15px;border-radius:100px;border:1.5px solid var(--line);transition:.3s}
+.alt-contact a svg{width:16px;height:16px}
+.alt-contact a.wa{color:#128C7E;border-color:rgba(18,140,126,.3)}
+.alt-contact a.wa:hover{background:#128C7E;color:#fff;border-color:#128C7E}
+.alt-contact a.call{color:var(--green);border-color:rgba(14,122,59,.3)}
+.alt-contact a.call:hover{background:var(--green);color:#fff}
+
+.contact-info h3{font-size:1.5rem;margin-bottom:20px}
+.info-block{display:flex;gap:14px;padding:16px 0;border-bottom:1px solid var(--line)}
+.info-block .ii{width:40px;height:40px;flex:none;border-radius:10px;background:rgba(27,168,74,.1);display:flex;align-items:center;justify-content:center;color:var(--green)}
+.info-block .ii svg{width:19px;height:19px;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+.info-block .it{font-family:var(--font-head);font-weight:600;font-size:.78rem;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-soft);margin-bottom:4px}
+.info-block .iv{font-size:.98rem;color:var(--ink);line-height:1.5}
+.info-block .iv a:hover{color:var(--green)}
+.info-block .iv .ar-addr{font-family:'IBM Plex Sans Arabic';color:var(--ink-soft);font-size:.9rem;margin-top:4px;display:block}
+.map-wrap{margin-top:26px;border-radius:var(--r);overflow:hidden;border:1px solid var(--line);position:relative;aspect-ratio:16/9;background:var(--paper)}
+.map-wrap iframe{width:100%;height:100%;border:0;position:relative;z-index:1;filter:grayscale(.3) saturate(1.15) hue-rotate(70deg) brightness(.98)}
+
+/* ============ FOOTER ============ */
+footer{background:var(--green-forest);color:rgba(255,255,255,.72);position:relative;overflow:hidden}
+.foot-watermark{position:absolute;inset-block-end:-4%;inset-inline-end:2%;font-family:var(--font-head);font-weight:800;font-size:clamp(90px,20vw,260px);color:rgba(255,255,255,.03);line-height:.7;pointer-events:none;letter-spacing:-.04em}
+.foot-inner{position:relative;z-index:2;max-width:var(--maxw);margin-inline:auto;padding:clamp(56px,7vw,90px) var(--pad) 30px;display:grid;grid-template-columns:1.6fr 1fr 1fr 1.2fr;gap:40px}
+.foot-brand .brand{color:#fff;margin-bottom:18px}
+.foot-brand .brand .mark path{stroke:var(--green-bright)}
+.foot-brand p{font-size:.9rem;max-width:34ch;line-height:1.6}
+.foot-col h5{font-family:var(--font-head);font-weight:600;color:#fff;font-size:.82rem;letter-spacing:.1em;text-transform:uppercase;margin-bottom:16px}
+.foot-col ul{list-style:none;display:flex;flex-direction:column;gap:9px}
+.foot-col a,.foot-col li{font-size:.9rem;transition:color .3s}
+.foot-col a:hover{color:var(--green-bright)}
+.foot-bottom{position:relative;z-index:2;max-width:var(--maxw);margin-inline:auto;padding:22px var(--pad);border-top:1px solid rgba(255,255,255,.1);display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;font-size:.82rem}
+.foot-bottom .ar-name{font-family:'IBM Plex Sans Arabic'}
+
+/* ============ CUSTOM CURSOR (desktop hover only) ============ */
+#cursor,#cursor-dot{display:none}
+@media (hover:hover) and (pointer:fine){
+  #cursor{display:block;position:fixed;width:34px;height:34px;border:1.5px solid rgba(27,168,74,.6);border-radius:50%;z-index:9999;pointer-events:none;transform:translate(-50%,-50%);transition:width .25s,height .25s,background .25s;mix-blend-mode:difference}
+  #cursor.big{width:60px;height:60px;background:rgba(27,168,74,.15)}
+  #cursor-dot{display:block;position:fixed;width:5px;height:5px;background:var(--green-bright);border-radius:50%;z-index:9999;pointer-events:none;transform:translate(-50%,-50%)}
+}
+
+/* ============ SHIMMER ============ */
+.ph{position:relative;background:var(--paper-2)}
+.ph::before{content:"";position:absolute;inset:0;background:linear-gradient(100deg,transparent 20%,rgba(255,255,255,.5) 50%,transparent 80%);background-size:200% 100%;animation:sh 1.5s infinite}
+@keyframes sh{to{background-position:-200% 0}}
+.media-fallback{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;background:linear-gradient(150deg,var(--green-deep),var(--green-forest));color:rgba(255,255,255,.7)}
+.media-fallback svg{width:40px;opacity:.5}
+.media-fallback span{font-family:var(--font-head);font-size:.72rem;letter-spacing:.12em;text-transform:uppercase}
+
+/* ============ RESPONSIVE ============ */
+@media(max-width:960px){
+  .nav-links{display:none}
+  .nav-cta.desk{display:none}
+  .burger{display:flex}
+  .about-grid{grid-template-columns:1fr;gap:44px}
+  .about-media{max-width:400px;margin-inline:auto}
+  .stats-grid{grid-template-columns:repeat(2,1fr);gap:34px 24px}
+  .supply-grid{grid-template-columns:repeat(2,1fr)}
+  .proc-grid{grid-template-columns:repeat(2,1fr);gap:30px}
+  .proc-step .arch-con{display:none}
+  .sector-grid{grid-template-columns:repeat(2,1fr)}
+  .why-grid{grid-template-columns:1fr 1fr}
+  .mvv{grid-template-columns:1fr}
+  .contact-grid{grid-template-columns:1fr}
+  .tl-track{grid-template-columns:1fr;gap:0}
+  .tl-track::before{inset-inline-start:8px;inset-inline-end:auto;top:6%;bottom:6%;width:2px;height:auto}
+  body.ar .tl-track::before{background:linear-gradient(180deg,var(--green-bright),var(--line))}
+  .tl-item{padding-top:0;padding-inline-start:34px;padding-bottom:30px}
+  .tl-item .dot{top:4px}
+  .partner-row{grid-template-columns:repeat(3,1fr)}
+  .foot-inner{grid-template-columns:1fr 1fr;gap:34px}
+}
+@media(max-width:560px){
+  .supply-grid{grid-template-columns:1fr}
+  .why-grid{grid-template-columns:1fr}
+  .sector-grid{grid-template-columns:1fr 1fr}
+  .field.two{grid-template-columns:1fr}
+  .partner-row{grid-template-columns:repeat(2,1fr)}
+  .foot-inner{grid-template-columns:1fr}
+  .hero-cta{flex-direction:column;align-items:stretch}
+  .hero-cta .btn{justify-content:center}
+}
+@media (prefers-reduced-motion:reduce){
+  *{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;scroll-behavior:auto!important}
+  .hero-bg img{animation:none}
+  .reveal{opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+
+<!-- ============ LOADER ============ -->
+<div id="loader" role="status" aria-label="Loading">
+  <svg viewBox="0 0 96 80" aria-hidden="true">
+    <path class="arch" d="M14 68V42a10 10 0 0120 0v26"/>
+    <path class="arch" d="M38 68V30a12 12 0 0124 0v38"/>
+    <path class="arch" d="M64 68V20a13 13 0 0126 0v48"/>
+  </svg>
+  <div class="ld-word">SHE</div>
+  <div class="ld-sub">Saudi House of Expertise</div>
+</div>
+<script>(function(){var l=document.getElementById('loader');
+var h=function(){if(l){l.classList.add('hide');setTimeout(function(){l.classList.add('gone')},1000)}};
+setTimeout(h,1900);addEventListener('error',h);
+addEventListener('load',function(){setTimeout(h,600)});})();</script>
+
+<div id="cursor"></div><div id="cursor-dot"></div>
+
+<!-- ============ NAV ============ -->
+<header id="nav">
+  <a href="#top" class="brand" aria-label="SHE — Saudi House of Expertise, home">
+    <svg class="mark" viewBox="0 0 48 40" aria-hidden="true">
+      <path d="M6 34V24a5 5 0 0110 0v10"/>
+      <path d="M19 34V17a6 6 0 0112 0v17"/>
+      <path d="M34 34V10a5.5 5.5 0 0111 0v24"/>
+    </svg>
+    <span class="wm">
+      <b>SHE</b>
+      <span class="en-only">Saudi House of Expertise</span>
+      <span class="ar-name ar-only">دار الخبرات السعودية</span>
+    </span>
+  </a>
+  <nav class="nav-links" aria-label="Primary">
+    <a href="#about" data-en="About" data-ar="من نحن">About</a>
+    <a href="#supply" data-en="What We Supply" data-ar="ما نورّده">What We Supply</a>
+    <a href="#process" data-en="How We Work" data-ar="كيف نعمل">How We Work</a>
+    <a href="#sectors" data-en="Sectors" data-ar="القطاعات">Sectors</a>
+    <a href="#contact" data-en="Contact" data-ar="تواصل معنا">Contact</a>
+  </nav>
+  <div class="nav-right">
+    <button class="lang-toggle" id="langBtn" aria-label="Switch language">
+      <span class="cur">EN</span><span>·</span><span>ع</span>
+    </button>
+    <a href="#contact" class="btn btn-primary nav-cta desk" data-en="Request a Quote" data-ar="اطلب عرض سعر">Request a Quote</a>
+    <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<!-- ============ MOBILE MENU ============ -->
+<div id="mmenu">
+  <button id="mclose" aria-label="Close menu">&times;</button>
+  <a href="#about"><span data-en="About" data-ar="من نحن">About</span><small data-en="من نحن" data-ar="About">من نحن</small></a>
+  <a href="#supply"><span data-en="What We Supply" data-ar="ما نورّده">What We Supply</span><small data-en="ما نورّده" data-ar="What We Supply">ما نورّده</small></a>
+  <a href="#process"><span data-en="How We Work" data-ar="كيف نعمل">How We Work</span><small data-en="كيف نعمل" data-ar="How We Work">كيف نعمل</small></a>
+  <a href="#sectors"><span data-en="Sectors" data-ar="القطاعات">Sectors</span><small data-en="القطاعات" data-ar="Sectors">القطاعات</small></a>
+  <a href="#contact"><span data-en="Contact" data-ar="تواصل معنا">Contact</span><small data-en="تواصل معنا" data-ar="Contact">تواصل معنا</small></a>
+  <div class="m-foot">
+    <a href="#contact" class="btn btn-primary" data-en="Request a Quote" data-ar="اطلب عرض سعر">Request a Quote</a>
+    <button class="lang-toggle" id="langBtnM"><span class="cur">EN</span><span>·</span><span>عربي</span></button>
+  </div>
+</div>
+
+<!-- ============ HERO ============ -->
+<section id="top">
+  <div class="hero-bg">
+    <div class="ph" style="position:absolute;inset:0"></div>
+    <img src="img/hero.jpg" alt="Warehousing and nationwide logistics operation" fetchpriority="high" onerror="mediaFallback(this,'Nationwide Supply')">
+  </div>
+  <div class="hero-scrim"></div>
+  <div class="hero-inner">
+    <div class="eyebrow hero-anim" data-en="Est. 1971 · Riyadh · Kingdom of Saudi Arabia" data-ar="تأسست ١٩٧١ · الرياض · المملكة العربية السعودية">Est. 1971 · Riyadh · Kingdom of Saudi Arabia</div>
+    <h1 class="hero-anim d1">
+      <span data-en="Your single-source supply &amp; procurement partner" data-ar="شريكك الموحّد للتوريد والمشتريات">Your single-source supply &amp; procurement partner</span>
+      <em data-en="since 1971." data-ar="منذ عام ١٩٧١.">since 1971.</em>
+    </h1>
+    <p class="hero-sub hero-anim d2" data-en="Saudi House of Expertise sources, procures and delivers thirteen product lines to projects and institutions across the Kingdom — from one accountable point of contact." data-ar="دار الخبرات السعودية توفّر وتشتري وتُسلّم ثلاثة عشر خط منتجات للمشاريع والمؤسسات في جميع أنحاء المملكة — من نقطة اتصال واحدة مسؤولة.">Saudi House of Expertise sources, procures and delivers thirteen product lines to projects and institutions across the Kingdom — from one accountable point of contact.</p>
+    <div class="hero-cta hero-anim d3">
+      <a href="#contact" class="btn btn-primary" data-en="Request a Quote" data-ar="اطلب عرض سعر">Request a Quote
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
+      <a href="#supply" class="btn btn-ghost on-dark" data-en="Explore What We Supply" data-ar="استكشف ما نورّده">Explore What We Supply</a>
+    </div>
+    <div class="trust-strip hero-anim d4">
+      <span data-en="Est. 1971" data-ar="تأسست ١٩٧١">Est. 1971</span>
+      <span data-en="Riyadh HQ" data-ar="المقر: الرياض">Riyadh HQ</span>
+      <span data-en="Nationwide coverage" data-ar="تغطية وطنية">Nationwide coverage</span>
+      <span data-en="13 product lines" data-ar="١٣ خط منتجات">13 product lines</span>
+    </div>
+  </div>
+  <div class="scroll-hint" aria-hidden="true"><span data-en="Scroll" data-ar="مرّر">Scroll</span><i></i></div>
+</section>
+
+<!-- ============ STATS ============ -->
+<section id="stats" aria-label="Key figures">
+  <svg class="arch-water" viewBox="0 0 48 40" aria-hidden="true"><g fill="none" stroke="#fff" stroke-width="2"><path d="M6 34V24a5 5 0 0110 0v10"/><path d="M19 34V17a6 6 0 0112 0v17"/><path d="M34 34V10a5.5 5.5 0 0111 0v24"/></g></svg>
+  <div class="stats-grid">
+    <div class="stat"><b data-count="1971" data-plain="1">1971</b><span data-en="Year founded" data-ar="سنة التأسيس">Year founded</span></div>
+    <div class="stat"><b><span data-count="54">54</span><span class="plus">+</span></b><span data-en="Years of service" data-ar="عاماً من الخدمة">Years of service</span></div>
+    <div class="stat"><b data-count="13">13</b><span data-en="Product lines" data-ar="خطوط منتجات">Product lines</span></div>
+    <div class="stat"><b data-en="Nationwide" data-ar="وطنية">Nationwide</b><span data-en="Delivery coverage" data-ar="تغطية التسليم">Delivery coverage</span></div>
+  </div>
+</section>
+
+<!-- ============ ABOUT / HERITAGE ============ -->
+<section id="about" class="section">
+  <div class="about-grid">
+    <div class="about-copy">
+      <div class="eyebrow reveal" data-en="01 — About SHE" data-ar="٠١ — من نحن">01 — About SHE</div>
+      <h2 class="h-lg reveal d1" style="margin-top:18px" data-en="A Saudi-owned house of expertise, built over five decades." data-ar="بيت خبرة سعودي، بُني على مدى خمسة عقود.">A Saudi-owned house of expertise, built over five decades.</h2>
+      <p class="lead reveal d1" data-en="Founded in 1971 and headquartered in Riyadh, Saudi House of Expertise (SHE) is a single-source procurement and supply partner to businesses, projects and institutions across the Kingdom." data-ar="تأسست عام ١٩٧١ ومقرها الرياض، دار الخبرات السعودية (SHE) شريك موحّد للمشتريات والتوريد للأعمال والمشاريع والمؤسسات في جميع أنحاء المملكة.">Founded in 1971 and headquartered in Riyadh, Saudi House of Expertise (SHE) is a single-source procurement and supply partner to businesses, projects and institutions across the Kingdom.</p>
+      <p class="reveal d2" data-en="We source and supply high-quality materials and equipment from reputed local and international manufacturers, with a proven track record of prompt, efficient, nationwide service. We manage the supply chain from start to end — so our clients deal with one accountable partner, not a dozen vendors." data-ar="نوفّر ونورّد مواد ومعدات عالية الجودة من مصنّعين محليين ودوليين مرموقين، بسجل حافل من الخدمة السريعة والفعّالة على مستوى المملكة. ندير سلسلة التوريد من البداية إلى النهاية — ليتعامل عملاؤنا مع شريك واحد مسؤول، لا مع عشرات المورّدين.">We source and supply high-quality materials and equipment from reputed local and international manufacturers, with a proven track record of prompt, efficient, nationwide service. We manage the supply chain from start to end — so our clients deal with one accountable partner, not a dozen vendors.</p>
+      <p class="reveal d2" style="color:var(--ink);font-weight:500" data-en="Our team is multi-disciplinary by design:" data-ar="فريقنا متعدد التخصصات بحكم تكوينه:">Our team is multi-disciplinary by design:</p>
+      <div class="expert-tags reveal d3">
+        <span class="tag" data-en="Engineers" data-ar="مهندسون">Engineers</span>
+        <span class="tag" data-en="Safety experts" data-ar="خبراء سلامة">Safety experts</span>
+        <span class="tag" data-en="Food experts" data-ar="خبراء أغذية">Food experts</span>
+        <span class="tag" data-en="Pharmacists" data-ar="صيادلة">Pharmacists</span>
+      </div>
+    </div>
+    <div class="about-media reveal d1">
+      <div class="frame">
+        <div class="ph" style="position:absolute;inset:0"></div>
+        <img src="img/heritage.jpg" alt="Established institution in the Kingdom of Saudi Arabia" loading="lazy" decoding="async" onerror="mediaFallback(this,'Since 1971')">
+      </div>
+      <div class="badge"><b>54<span style="font-size:1.3rem">+</span></b><span data-en="Years in the Kingdom" data-ar="عاماً في المملكة">Years in the Kingdom</span></div>
+    </div>
+  </div>
+
+  <!-- TIMELINE -->
+  <div class="timeline">
+    <div class="eyebrow reveal" data-en="Our Journey" data-ar="مسيرتنا">Our Journey</div>
+    <h3 class="h-md reveal d1" style="margin-top:14px" data-en="Five decades of range and reliability" data-ar="خمسة عقود من التنوّع والموثوقية">Five decades of range and reliability</h3>
+    <div class="tl-track">
+      <div class="tl-item reveal d1">
+        <div class="dot"></div>
+        <div class="yr">1971</div>
+        <h4 data-en="A Saudi trading house is founded" data-ar="تأسيس بيت تجاري سعودي">A Saudi trading house is founded</h4>
+        <p data-en="SHE opens in Riyadh as a Saudi-owned trading and supply establishment, built on service and long-term relationships." data-ar="تفتح SHE في الرياض كمؤسسة تجارية وتوريد سعودية، قائمة على الخدمة والعلاقات طويلة الأمد.">SHE opens in Riyadh as a Saudi-owned trading and supply establishment, built on service and long-term relationships.</p>
+      </div>
+      <div class="tl-item heritage-note reveal d2">
+        <div class="dot"></div>
+        <div class="yr" data-en="Heritage" data-ar="إرث">Heritage</div>
+        <h4 data-en="The House of Beverage Solutions" data-ar="بيت حلول المشروبات">The House of Beverage Solutions</h4>
+        <p data-en="For a chapter of its journey, SHE equipped hotels, restaurants and cafés end-to-end — espresso machines, specialty coffee, syrups and teas — proving it could outfit entire operations." data-ar="في فصل من مسيرتها، جهّزت SHE الفنادق والمطاعم والمقاهي بالكامل — مكائن إسبريسو وقهوة مختصة وشراب وشاي — مثبتةً قدرتها على تجهيز عمليات كاملة.">For a chapter of its journey, SHE equipped hotels, restaurants and cafés end-to-end — espresso machines, specialty coffee, syrups and teas — proving it could outfit entire operations.</p>
+      </div>
+      <div class="tl-item reveal d3">
+        <div class="dot"></div>
+        <div class="yr data-en" data-en="Today" data-ar="اليوم">Today</div>
+        <h4 data-en="Diversified trading &amp; procurement" data-ar="تجارة ومشتريات متنوّعة">Diversified trading &amp; procurement</h4>
+        <p data-en="SHE supplies thirteen product lines — from construction and healthcare to safety, electrical and industrial — as a single-source partner across the Kingdom." data-ar="توفّر SHE ثلاثة عشر خط منتجات — من الإنشاءات والرعاية الصحية إلى السلامة والكهرباء والصناعة — كشريك موحّد في جميع أنحاء المملكة.">SHE supplies thirteen product lines — from construction and healthcare to safety, electrical and industrial — as a single-source partner across the Kingdom.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ WHAT WE SUPPLY ============ -->
+<section id="supply" class="section-wide">
+  <div style="max-width:var(--maxw);margin-inline:auto;padding-inline:var(--pad)">
+    <div class="supply-head">
+      <div>
+        <div class="eyebrow reveal" data-en="02 — What We Supply" data-ar="٠٢ — ما نورّده">02 — What We Supply</div>
+        <h2 class="h-lg reveal d1" style="margin-top:16px" data-en="Thirteen product lines. One point of contact." data-ar="ثلاثة عشر خط منتجات. نقطة اتصال واحدة.">Thirteen product lines. One point of contact.</h2>
+      </div>
+      <p class="lead reveal d2" style="max-width:34ch" data-en="Hover a line to see representative items. Everything is sourced, quality-checked and delivered by SHE." data-ar="مرّر على أي خط لرؤية أمثلة من المنتجات. كل شيء يتم توفيره وفحص جودته وتسليمه بواسطة SHE.">Hover a line to see representative items. Everything is sourced, quality-checked and delivered by SHE.</p>
+    </div>
+    <div class="supply-grid" id="supplyGrid"></div>
+  </div>
+</section>
+
+<!-- ============ HOW WE WORK ============ -->
+<section id="process" class="section">
+  <div class="eyebrow reveal" data-en="03 — How We Work" data-ar="٠٣ — كيف نعمل">03 — How We Work</div>
+  <h2 class="h-lg reveal d1" style="margin-top:16px;max-width:20ch" data-en="A managed supply chain, from source to site." data-ar="سلسلة توريد مُدارة، من المصدر إلى الموقع.">A managed supply chain, from source to site.</h2>
+  <div class="proc-grid">
+    <div class="proc-step reveal d1">
+      <div class="n">01</div>
+      <svg class="arch-con" viewBox="0 0 32 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M0 10h26M20 4l6 6-6 6"/></svg>
+      <h4 data-en="Source" data-ar="التوفير">Source</h4>
+      <p data-en="We identify the right products from reputed local and international manufacturers — including specialized, hard-to-find items." data-ar="نحدد المنتجات المناسبة من مصنّعين محليين ودوليين مرموقين — بما في ذلك الأصناف المتخصصة ونادرة التوفّر.">We identify the right products from reputed local and international manufacturers — including specialized, hard-to-find items.</p>
+    </div>
+    <div class="proc-step reveal d1">
+      <div class="n">02</div>
+      <svg class="arch-con" viewBox="0 0 32 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M0 10h26M20 4l6 6-6 6"/></svg>
+      <h4 data-en="Procure" data-ar="الشراء">Procure</h4>
+      <p data-en="Our specialist team negotiates and procures at the best value, managing supplier relationships built over decades." data-ar="يتفاوض فريقنا المتخصص ويشتري بأفضل قيمة، مديراً علاقات مورّدين بُنيت على مدى عقود.">Our specialist team negotiates and procures at the best value, managing supplier relationships built over decades.</p>
+    </div>
+    <div class="proc-step reveal d2">
+      <div class="n">03</div>
+      <svg class="arch-con" viewBox="0 0 32 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M0 10h26M20 4l6 6-6 6"/></svg>
+      <h4 data-en="Quality-check" data-ar="فحص الجودة">Quality-check</h4>
+      <p data-en="Engineers, pharmacists and safety experts verify products meet quality requirements before they reach you." data-ar="يتحقق المهندسون والصيادلة وخبراء السلامة من مطابقة المنتجات لمتطلبات الجودة قبل وصولها إليك.">Engineers, pharmacists and safety experts verify products meet quality requirements before they reach you.</p>
+    </div>
+    <div class="proc-step reveal d2">
+      <div class="n">04</div>
+      <h4 data-en="Supply &amp; deliver" data-ar="التوريد والتسليم">Supply &amp; deliver</h4>
+      <p data-en="We deliver nationwide, on time and at short notice — a single accountable partner from start to finish." data-ar="نُسلّم في جميع أنحاء المملكة، في الوقت المحدد وبمهلة قصيرة — شريك واحد مسؤول من البداية إلى النهاية.">We deliver nationwide, on time and at short notice — a single accountable partner from start to finish.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SECTORS ============ -->
+<section id="sectors" class="section-wide">
+  <div style="max-width:var(--maxw);margin-inline:auto;padding-inline:var(--pad)">
+    <div class="eyebrow reveal" data-en="04 — Sectors We Serve" data-ar="٠٤ — القطاعات التي نخدمها">04 — Sectors We Serve</div>
+    <h2 class="h-lg reveal d1" style="margin-top:16px;max-width:22ch" data-en="Trusted by the sectors that build the Kingdom." data-ar="موضع ثقة القطاعات التي تبني المملكة.">Trusted by the sectors that build the Kingdom.</h2>
+    <div class="sector-grid" id="sectorGrid"></div>
+  </div>
+</section>
+
+<!-- ============ WHY SHE ============ -->
+<section class="section">
+  <div class="eyebrow reveal" data-en="05 — Why SHE" data-ar="٠٥ — لماذا SHE">05 — Why SHE</div>
+  <h2 class="h-lg reveal d1" style="margin-top:16px;max-width:20ch" data-en="Confidence through specificity, not slogans." data-ar="ثقة قائمة على التحديد، لا على الشعارات.">Confidence through specificity, not slogans.</h2>
+  <div class="why-grid" id="whyGrid"></div>
+</section>
+
+<!-- ============ MISSION / VALUES / QUOTE ============ -->
+<section id="mission">
+  <div class="authority-img"><img src="img/authority.jpg" alt="" aria-hidden="true" loading="lazy" decoding="async" onerror="this.style.display='none'"></div>
+  <div class="inner">
+    <div class="eyebrow reveal" data-en="06 — Mission &amp; Values" data-ar="٠٦ — رسالتنا وقيمنا">06 — Mission &amp; Values</div>
+    <h2 class="h-lg reveal d1" style="margin-top:16px;max-width:24ch" data-en="What we hold ourselves to." data-ar="ما نلتزم به تجاه عملائنا.">What we hold ourselves to.</h2>
+    <div class="mvv">
+      <div class="card reveal d1">
+        <h4><span class="d"></span><span data-en="Our Mission" data-ar="رسالتنا">Our Mission</span></h4>
+        <ul>
+          <li data-en="Meet the diversified demands of customers across the Kingdom." data-ar="تلبية الاحتياجات المتنوّعة للعملاء في جميع أنحاء المملكة.">Meet the diversified demands of customers across the Kingdom.</li>
+          <li data-en="Lead market segments with quality products at reasonable prices." data-ar="ريادة قطاعات السوق بمنتجات عالية الجودة وأسعار معقولة.">Lead market segments with quality products at reasonable prices.</li>
+          <li data-en="Source from reputed manufacturers, locally and internationally." data-ar="التوريد من مصنّعين مرموقين، محلياً ودولياً.">Source from reputed manufacturers, locally and internationally.</li>
+        </ul>
+      </div>
+      <div class="card reveal d2">
+        <h4><span class="d"></span><span data-en="Our Promise" data-ar="وعدنا">Our Promise</span></h4>
+        <ul>
+          <li data-en="Be the preferred supplier, exceeding quality needs at short notice." data-ar="أن نكون المورّد المفضّل، متجاوزين متطلبات الجودة بمهلة قصيرة.">Be the preferred supplier, exceeding quality needs at short notice.</li>
+          <li data-en="Give customers accurate, timely product and market information." data-ar="تزويد العملاء بمعلومات دقيقة وفورية عن المنتجات والسوق.">Give customers accurate, timely product and market information.</li>
+          <li data-en="Be a professional marketing partner to principals and clients." data-ar="أن نكون شريكاً تسويقياً محترفاً للموكّلين والعملاء.">Be a professional marketing partner to principals and clients.</li>
+        </ul>
+      </div>
+      <div class="card reveal d3">
+        <h4><span class="d"></span><span data-en="Our Culture" data-ar="ثقافتنا">Our Culture</span></h4>
+        <ul>
+          <li data-en="Build a transparent, teamwork-driven work environment." data-ar="بناء بيئة عمل شفافة قائمة على روح الفريق.">Build a transparent, teamwork-driven work environment.</li>
+          <li data-en="Harness every employee's creative energy." data-ar="تسخير الطاقات الإبداعية لكل موظف.">Harness every employee's creative energy.</li>
+          <li data-en="Put customer satisfaction above everything else." data-ar="وضع رضا العميل فوق كل اعتبار.">Put customer satisfaction above everything else.</li>
+        </ul>
+      </div>
+    </div>
+    <div class="pullquote reveal d1">
+      <span class="qm">&ldquo;</span>
+      <blockquote data-en="A satisfied customer will continue to buy from you, seldom shop around, refer other customers, and be a superstar advocate for your business. The single most important thing is to make people happy — well taken care of, one customer could be more valuable than $100,000 worth of advertising." data-ar="العميل الراضي سيواصل الشراء منك، ونادراً ما يبحث في مكان آخر، ويوصي بعملاء آخرين، ويصبح مناصراً بارزاً لعملك. أهم شيء على الإطلاق هو إسعاد الناس — فعميل واحد يُعتنى به جيداً قد يكون أثمن من دعاية بقيمة ١٠٠٬٠٠٠ دولار.">A satisfied customer will continue to buy from you, seldom shop around, refer other customers, and be a superstar advocate for your business. The single most important thing is to make people happy — well taken care of, one customer could be more valuable than $100,000 worth of advertising.</blockquote>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PARTNERS ============ -->
+<section class="section">
+  <div class="eyebrow reveal" data-en="Principals &amp; Partners" data-ar="الموكّلون والشركاء">Principals &amp; Partners</div>
+  <h3 class="h-md reveal d1" style="margin-top:14px;max-width:30ch" data-en="We source from reputed local and international manufacturers." data-ar="نوفّر من مصنّعين محليين ودوليين مرموقين.">We source from reputed local and international manufacturers.</h3>
+  <div class="partner-row reveal d1" id="partnerRow"></div>
+  <p class="form-note reveal d2" style="margin-top:16px" data-en="Placeholder slots — real principal and partner logos to be supplied by SHE." data-ar="خانات مؤقتة — سيتم تزويد شعارات الموكّلين والشركاء الفعلية من قبل SHE.">Placeholder slots — real principal and partner logos to be supplied by SHE.</p>
+</section>
+
+<!-- ============ RFQ + CONTACT ============ -->
+<section id="contact" class="section-wide">
+  <div style="max-width:var(--maxw);margin-inline:auto;padding-inline:var(--pad)">
+    <div class="eyebrow reveal" data-en="07 — Request a Quote" data-ar="٠٧ — اطلب عرض سعر">07 — Request a Quote</div>
+    <h2 class="h-lg reveal d1" style="margin:16px 0 44px;max-width:22ch" data-en="Tell us what you need supplied." data-ar="أخبرنا بما تحتاج إلى توريده.">Tell us what you need supplied.</h2>
+    <div class="contact-grid">
+      <!-- RFQ FORM -->
+      <div class="rfq reveal d1">
+        <form id="rfqForm" novalidate>
+          <h3 data-en="Request for Quotation" data-ar="طلب عرض سعر">Request for Quotation</h3>
+          <p class="sub" data-en="We typically respond within one business day." data-ar="نرد عادةً خلال يوم عمل واحد.">We typically respond within one business day.</p>
+          <div class="field two">
+            <div><label><span data-en="Full name" data-ar="الاسم الكامل">Full name</span> <span class="req">*</span></label><input type="text" id="f_name" required data-en-ph="Your name" data-ar-ph="اسمك"></div>
+            <div><label data-en="Company" data-ar="الشركة">Company</label><input type="text" id="f_company" data-en-ph="Company name" data-ar-ph="اسم الشركة"></div>
+          </div>
+          <div class="field two">
+            <div><label><span data-en="Email" data-ar="البريد الإلكتروني">Email</span> <span class="req">*</span></label><input type="email" id="f_email" required data-en-ph="you@company.com" data-ar-ph="you@company.com"></div>
+            <div><label data-en="Phone" data-ar="الهاتف">Phone</label><input type="tel" id="f_phone" data-en-ph="+966 5x xxx xxxx" data-ar-ph="+966 5x xxx xxxx"></div>
+          </div>
+          <div class="field">
+            <label><span data-en="Product line" data-ar="خط المنتجات">Product line</span> <span class="req">*</span></label>
+            <select id="f_line" required></select>
+          </div>
+          <div class="field">
+            <label><span data-en="What do you need supplied?" data-ar="ما الذي تحتاج إلى توريده؟">What do you need supplied?</span> <span class="req">*</span></label>
+            <textarea id="f_msg" required data-en-ph="Describe the items, quantities and delivery location…" data-ar-ph="صف الأصناف والكميات وموقع التسليم…"></textarea>
+          </div>
+          <div class="rfq-actions">
+            <button type="submit" class="btn btn-primary" data-en="Send Request" data-ar="إرسال الطلب">Send Request
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg>
+            </button>
+            <a href="she-profile.pdf" download class="btn btn-ghost" data-en="Download Company Profile" data-ar="تحميل ملف الشركة">Download Company Profile
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+            </a>
+          </div>
+          <p class="form-note" data-en="No account needed. Submitting opens your email app with the details pre-filled, addressed to dr.khan@she.sa.com — so your request always reaches us." data-ar="لا حاجة لحساب. عند الإرسال يفتح تطبيق بريدك مع التفاصيل مُعبّأة مسبقاً إلى dr.khan@she.sa.com — ليصل طلبك إلينا دائماً.">No account needed. Submitting opens your email app with the details pre-filled, addressed to dr.khan@she.sa.com — so your request always reaches us.</p>
+        </form>
+        <div class="rfq-success" id="rfqSuccess">
+          <div class="check"><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg></div>
+          <h3 data-en="Request ready to send" data-ar="طلبك جاهز للإرسال">Request ready to send</h3>
+          <p data-en="Your email app should have opened with everything filled in. If it didn't, use the buttons below to reach us directly." data-ar="من المفترض أن يكون تطبيق بريدك قد فُتح مع تعبئة كل التفاصيل. إن لم يحدث، استخدم الأزرار أدناه للتواصل معنا مباشرة.">Your email app should have opened with everything filled in. If it didn't, use the buttons below to reach us directly.</p>
+          <div class="alt-contact" style="justify-content:center">
+            <a class="call" href="tel:+96611464480"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 01-2.2 2 19.8 19.8 0 01-8.6-3 19.5 19.5 0 01-6-6 19.8 19.8 0 01-3-8.6A2 2 0 014.1 2h3a2 2 0 012 1.7c.1.9.4 1.8.7 2.7a2 2 0 01-.5 2.1L8.1 9.9a16 16 0 006 6l1.4-1.2a2 2 0 012.1-.5c.9.3 1.8.6 2.7.7a2 2 0 011.7 2z"/></svg>800 6070 000</a>
+            <a class="wa" href="https://wa.me/966503164927" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 00-8.6 15l-1.3 4.7 4.8-1.3A10 10 0 1012 2zm0 2a8 8 0 11-4.2 14.8l-.3-.2-2.6.7.7-2.6-.2-.3A8 8 0 0112 4zm4.3 10.4c-.2-.1-1.4-.7-1.6-.8s-.4-.1-.5.1-.6.8-.8 1-.3.2-.5 0a6.5 6.5 0 01-1.9-1.2 7.2 7.2 0 01-1.3-1.7c-.2-.2 0-.4.1-.5l.4-.4.2-.4a.5.5 0 000-.4l-.7-1.8c-.2-.4-.4-.4-.5-.4h-.5a.9.9 0 00-.7.3 2.8 2.8 0 00-.9 2.1 4.9 4.9 0 001 2.6 11.2 11.2 0 004.3 3.8c.6.3 1.1.4 1.5.5a3.6 3.6 0 001.6.1 2.7 2.7 0 001.8-1.3 2.2 2.2 0 00.2-1.3c-.1-.1-.3-.2-.5-.3z"/></svg>WhatsApp</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- CONTACT INFO -->
+      <div class="contact-info reveal d2">
+        <h3 data-en="Reach us directly" data-ar="تواصل معنا مباشرة">Reach us directly</h3>
+        <div class="info-block">
+          <div class="ii"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+          <div>
+            <div class="it" data-en="Head Office" data-ar="المكتب الرئيسي">Head Office</div>
+            <div class="iv">
+              Office No. 5, Building No. 2335,<br>Sheikh Salman Bin Hamad Al Khalifa St.,<br>Al-Malaz District, Riyadh, Saudi Arabia.<br>P.O. Box 88106, Riyadh 12831.
+              <span class="ar-addr">مكتب رقم ٥، مبنى رقم ٢٣٣٥، شارع الشيخ سلمان بن حمد آل خليفة، حي الملز، الرياض، المملكة العربية السعودية — ص.ب ٨٨١٠٦، الرياض ١٢٨٣١.</span>
+            </div>
+          </div>
+        </div>
+        <div class="info-block">
+          <div class="ii"><svg viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 01-2.2 2 19.8 19.8 0 01-8.6-3 19.5 19.5 0 01-6-6 19.8 19.8 0 01-3-8.6A2 2 0 014.1 2h3a2 2 0 012 1.7c.1.9.4 1.8.7 2.7a2 2 0 01-.5 2.1L8.1 9.9a16 16 0 006 6l1.4-1.2a2 2 0 012.1-.5c.9.3 1.8.6 2.7.7a2 2 0 011.7 2z"/></svg></div>
+          <div>
+            <div class="it" data-en="Phone &amp; Fax" data-ar="الهاتف والفاكس">Phone &amp; Fax</div>
+            <div class="iv">
+              <a href="tel:+96611464480">+966 11 464 4480</a> ·
+              <a href="tel:+966503164927">+966 50 316 4927</a><br>
+              <span style="color:var(--ink-soft)" data-en="Fax:" data-ar="فاكس:">Fax:</span> +966 11 465 6893
+            </div>
+          </div>
+        </div>
+        <div class="info-block">
+          <div class="ii"><svg viewBox="0 0 24 24"><path d="M18 8a6 6 0 00-12 0c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.7 21a2 2 0 01-3.4 0"/></svg></div>
+          <div>
+            <div class="it" data-en="Customer Care (Toll-free)" data-ar="خدمة العملاء (مجاني)">Customer Care (Toll-free)</div>
+            <div class="iv"><a href="tel:8006070000" style="font-weight:600;color:var(--green)">800 6070 000</a></div>
+          </div>
+        </div>
+        <div class="info-block">
+          <div class="ii"><svg viewBox="0 0 24 24"><path d="M4 4h16a2 2 0 012 2v12a2 2 0 01-2 2H4a2 2 0 01-2-2V6a2 2 0 012-2z"/><path d="M22 6l-10 7L2 6"/></svg></div>
+          <div>
+            <div class="it" data-en="Email &amp; Web" data-ar="البريد والموقع">Email &amp; Web</div>
+            <div class="iv"><a href="mailto:dr.khan@she.sa.com">dr.khan@she.sa.com</a><br><a href="https://www.she.sa.com" target="_blank" rel="noopener">www.she.sa.com</a></div>
+          </div>
+        </div>
+        <div class="info-block" style="border-bottom:0">
+          <div class="ii"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div>
+          <div>
+            <div class="it" data-en="Working Hours" data-ar="ساعات العمل">Working Hours</div>
+            <div class="iv" data-en="Sunday – Thursday, 8:00 AM – 5:00 PM" data-ar="الأحد – الخميس، ٨:٠٠ ص – ٥:٠٠ م">Sunday – Thursday, 8:00 AM – 5:00 PM</div>
+          </div>
+        </div>
+        <div class="map-wrap">
+          <div class="ph" style="position:absolute;inset:0"></div>
+          <iframe title="SHE location — Al-Malaz, Riyadh" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=Al-Malaz%20District%20Riyadh%20Saudi%20Arabia&output=embed"></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer>
+  <div class="foot-watermark" aria-hidden="true">SHE</div>
+  <div class="foot-inner">
+    <div class="foot-brand">
+      <a href="#top" class="brand">
+        <svg class="mark" viewBox="0 0 48 40" aria-hidden="true">
+          <path d="M6 34V24a5 5 0 0110 0v10"/><path d="M19 34V17a6 6 0 0112 0v17"/><path d="M34 34V10a5.5 5.5 0 0111 0v24"/>
+        </svg>
+        <span class="wm"><b>SHE</b><span class="ar-name" style="opacity:.75">دار الخبرات السعودية</span></span>
+      </a>
+      <p data-en="A Saudi-owned single-source supply &amp; procurement partner to the Kingdom since 1971." data-ar="شريك سعودي موحّد للتوريد والمشتريات في المملكة منذ عام ١٩٧١.">A Saudi-owned single-source supply &amp; procurement partner to the Kingdom since 1971.</p>
+    </div>
+    <div class="foot-col">
+      <h5 data-en="Company" data-ar="الشركة">Company</h5>
+      <ul>
+        <li><a href="#about" data-en="About" data-ar="من نحن">About</a></li>
+        <li><a href="#process" data-en="How We Work" data-ar="كيف نعمل">How We Work</a></li>
+        <li><a href="#sectors" data-en="Sectors" data-ar="القطاعات">Sectors</a></li>
+        <li><a href="#contact" data-en="Request a Quote" data-ar="اطلب عرض سعر">Request a Quote</a></li>
+      </ul>
+    </div>
+    <div class="foot-col">
+      <h5 data-en="What We Supply" data-ar="ما نورّده">What We Supply</h5>
+      <ul id="footLines"></ul>
+    </div>
+    <div class="foot-col">
+      <h5 data-en="Contact" data-ar="تواصل معنا">Contact</h5>
+      <ul>
+        <li><a href="tel:+96611464480">+966 11 464 4480</a></li>
+        <li><a href="tel:8006070000" data-en="Toll-free: 800 6070 000" data-ar="مجاني: 800 6070 000">Toll-free: 800 6070 000</a></li>
+        <li><a href="mailto:dr.khan@she.sa.com">dr.khan@she.sa.com</a></li>
+        <li data-en="Al-Malaz, Riyadh, KSA" data-ar="الملز، الرياض، السعودية">Al-Malaz, Riyadh, KSA</li>
+      </ul>
+    </div>
+  </div>
+  <div class="foot-bottom">
+    <span>&copy; <span id="year">2025</span> Saudi House of Expertise Est. — <span data-en="Est. 1971" data-ar="تأسست ١٩٧١">Est. 1971</span></span>
+    <span class="ar-name">دار الخبرات السعودية</span>
+  </div>
+</footer>
+
+<script>
+/* ===== IntersectionObserver declared FIRST (TDZ-safe) ===== */
+var io;
+(function(){
+  if('IntersectionObserver' in window){
+    io=new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if(e.isIntersecting){e.target.classList.add('vis');io.unobserve(e.target);
+          if(e.target.id==='stats'){runCounts();}
+        }
+      });
+    },{threshold:.12,rootMargin:'0px 0px -8% 0px'});
+  } else {
+    io={observe:function(el){el.classList.add('vis');if(el.id==='stats'){runCounts();}},unobserve:function(){}};
+  }
+})();
+function observe(el){try{if(el)io.observe(el);}catch(e){}}
+function observeAll(sel,ctx){ (ctx||document).querySelectorAll(sel).forEach(observe); }
+
+/* ===== DATA ===== */
+var SUPPLY=[
+ {ico:'<svg viewBox="0 0 24 24"><path d="M3 21h18M5 21V10l7-5 7 5v11M9 21v-6h6v6"/></svg>',en:'Construction & Building Materials',ar:'مواد البناء والإنشاءات',den:'Full range for residential & commercial projects, plus construction tools.',dar:'مجموعة كاملة للمشاريع السكنية والتجارية، إضافة إلى أدوات البناء.',subs:['Cement & aggregates','Finishing materials','Construction tools','Fixings']},
+ {ico:'<svg viewBox="0 0 24 24"><path d="M13 2L3 14h7l-1 8 10-12h-7l1-8z"/></svg>',en:'Electrical Consumables',ar:'المستهلكات الكهربائية',den:'Wiring, fittings, contactors, lamps and electrical supplies.',dar:'أسلاك وتوصيلات وكونتاكتورات ومصابيح ومستلزمات كهربائية.',subs:['Wiring & cables','Contactors','Lamps & starters','Fittings']},
+ {ico:'<svg viewBox="0 0 24 24"><path d="M4 4h16v16H4z"/><path d="M8 4v16M4 9h4M4 14h4"/></svg>',en:'Office Supplies & Stationery',ar:'المستلزمات المكتبية والقرطاسية',den:'Everyday consumables and stationery for offices of every size.',dar:'مستهلكات وقرطاسية يومية للمكاتب بمختلف أحجامها.',subs:['Paper & printing','Stationery','Filing','Consumables']},
+ {ico:'<svg viewBox="0 0 24 24"><path d="M12 2v6M9 5h6"/><rect x="4" y="8" width="16" height="13" rx="2"/><path d="M9 14h6M12 11v6"/></svg>',en:'Medicine & Medical Consumables',ar:'الأدوية والمستهلكات الطبية',den:'One of our deepest catalogs — PPE, first-aid, diagnostics, AEDs and OTC medicines.',dar:'من أعمق كتالوجاتنا — وقاية شخصية وإسعافات وأجهزة تشخيص ومزيلات رجفان وأدوية.',subs:['First-aid & bandages','BP monitors & oximeters','AEDs & stretchers','O2 & clinic furniture','OTC medicines']},
+ {ico:'<svg viewBox="0 0 24 24"><path d="M12 2l8 4v6c0 5-3.5 8-8 10-4.5-2-8-5-8-10V6l8-4z"/><path d="M9 12l2 2 4-4"/></svg>',en:'Safety & Security Equipment (PPE)',ar:'معدات السلامة والأمن',den:'Helmets, shoes, gloves, eye/face, hearing & respiratory protection, hi-viz, harnesses.',dar:'خوذ وأحذية وقفازات وحماية للعين والوجه والسمع والتنفس وسترات عاكسة وأحزمة أمان.',subs:['Safety helmets & shoes','Gloves & eye/face','Respiratory & hearing','Hi-viz & harnesses']},
+ {ico:'<svg viewBox="0 0 24 24"><path d="M12 22c4-2 6-5 6-9a6 6 0 00-12 0c0 4 2 7 6 9z"/><path d="M12 4c1 2 1 3 0 5-2-1-2-3 0-5z"/></svg>',en:'Fire-Fighting & Alarm Systems',ar:'أنظمة مكافحة الحرائق والإنذار',den:'Extinguishers, detection and alarm systems for facilities and sites.',dar:'طفايات وأنظمة كشف وإنذار للمنشآت والمواقع.',subs:['Extinguishers','Smoke & heat detection','Alarm panels','Signage']},
+ {ico:'<svg viewBox="0 0 24 24"><path d="M2 7h13v10H2z"/><path d="M15 10l5-3v10l-5-3"/><circle cx="8.5" cy="12" r="2"/></svg>',en:'Security Cameras & Installation',ar:'كاميرات المراقبة والتركيب',den:'CCTV supply and professional installation for premises of any scale.',dar:'توريد كاميرات مراقبة وتركيب احترافي للمنشآت بمختلف أحجامها.',subs:['IP & analog CCTV','NVR/DVR','Cabling & install','Monitoring']},
+ {ico:'<svg viewBox="0 0 24 24"><path d="M3 9l1-4h16l1 4M4 9h16v11H4z"/><path d="M9 13h6"/></svg>',en:'Grocery & Kitchenwares',ar:'البقالة وأدوات المطبخ',den:'Foodstuffs, groceries and kitchenware for institutional and commercial use.',dar:'مواد غذائية وبقالة وأدوات مطبخ للاستخدام المؤسسي والتجاري.',subs:['Dry & canned goods','Kitchen utensils','Cleaning supplies','Disposables']},
+ {ico:'<svg viewBox="0 0 24 24"><path d="M3 10h18v10H3zM6 10V6a2 2 0 012-2h8a2 2 0 012 2v4M8 20v-4M16 20v-4"/></svg>',en:'Furniture & Accessories',ar:'الأثاث وملحقاته',den:'Office, institutional and site furniture with all accessories.',dar:'أثاث مكتبي ومؤسسي وموقعي مع كل الملحقات.',subs:['Office furniture','Storage & shelving','Seating','Fixtures']},
+ {ico:'<svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M5 5l2 2M17 17l2 2M19 5l-2 2M7 17l-2 2"/></svg>',en:'Mechanical Supplies',ar:'التوريدات الميكانيكية',den:'Mechanical parts, tools and components for maintenance and operations.',dar:'قطع وأدوات ومكونات ميكانيكية للصيانة والتشغيل.',subs:['Fasteners & bearings','Hand & power tools','Pumps & valves','Spare parts']},
+ {ico:'<svg viewBox="0 0 24 24"><path d="M2 20h20M4 20V8l8-5 8 5v12M9 20v-5h6v5"/><path d="M4 12h16"/></svg>',en:'Industrial Installation Supplies',ar:'مستلزمات التركيبات الصناعية',den:'Materials and equipment for industrial installations and fit-outs.',dar:'مواد ومعدات للتركيبات والتجهيزات الصناعية.',subs:['Piping & ducting','Structural fixings','Industrial fittings','Site equipment']},
+ {ico:'<svg viewBox="0 0 24 24"><path d="M1 3h15v13H1zM16 8h4l3 3v5h-7"/><circle cx="5.5" cy="18.5" r="2"/><circle cx="18.5" cy="18.5" r="2"/></svg>',en:'Transport & Transport Supplies',ar:'النقل ومستلزماته',den:'Transport equipment and supplies supporting nationwide operations.',dar:'معدات ومستلزمات نقل تدعم العمليات على مستوى المملكة.',subs:['Vehicle supplies','Spare parts','Logistics equipment','Accessories']},
+ {ico:'<svg viewBox="0 0 24 24"><path d="M6 2l3 4 3-2 3 2 3-4v9a4 4 0 01-4 4H10a4 4 0 01-4-4V2z"/><path d="M9 22h6"/></svg>',en:'Uniforms for All Sectors',ar:'الأزياء الموحدة لجميع القطاعات',den:'Workwear and uniforms tailored for every industry and role.',dar:'ملابس عمل وأزياء موحّدة مصممة لكل قطاع ودور.',subs:['Industrial workwear','Medical scrubs','Corporate uniforms','Hospitality attire']}
+];
+var SECTORS=[
+ {img:'img/construction.jpg',en:'Construction & Contracting',ar:'الإنشاءات والمقاولات'},
+ {img:'img/medical.jpg',en:'Healthcare & Clinics',ar:'الرعاية الصحية والعيادات'},
+ {img:'img/electrical.jpg',en:'Industrial & Manufacturing',ar:'الصناعة والتصنيع'},
+ {img:'img/warehouse.jpg',en:'Government & Institutions',ar:'الجهات الحكومية والمؤسسات'},
+ {img:'img/office.jpg',en:'Offices & Corporate',ar:'المكاتب والشركات'},
+ {img:'img/transport.jpg',en:'Transport & Logistics',ar:'النقل والخدمات اللوجستية'},
+ {img:'img/logistics.jpg',en:'Facilities & Security',ar:'المرافق والأمن'},
+ {img:'img/heritage.jpg',en:'Hospitality & Services',ar:'الضيافة والخدمات'}
+];
+var WHY=[
+ {en:'One point of contact',ar:'نقطة اتصال واحدة',den:'Thirteen product lines from a single accountable partner — not a dozen scattered vendors.',dar:'ثلاثة عشر خط منتجات من شريك واحد مسؤول — بدلاً من عشرات المورّدين المتفرقين.'},
+ {en:'50+ years of reliability',ar:'أكثر من ٥٠ عاماً من الموثوقية',den:'A Saudi-owned house trading since 1971, with a proven, nationwide track record.',dar:'بيت خبرة سعودي يعمل بالتجارة منذ ١٩٧١، بسجل حافل على مستوى المملكة.'},
+ {en:'An expert team',ar:'فريق من الخبراء',den:'Engineers, pharmacists, food and safety experts vet what we supply.',dar:'مهندسون وصيادلة وخبراء أغذية وسلامة يفحصون ما نورّده.'},
+ {en:'Local + global sourcing',ar:'توريد محلي وعالمي',den:'Strategic partnerships let us procure quality products at the best value.',dar:'شراكات استراتيجية تتيح لنا شراء منتجات عالية الجودة بأفضل قيمة.'},
+ {en:'Short-notice fulfilment',ar:'تلبية بمهلة قصيرة',den:'We keep pace with fast-moving projects and deliver even specialized items quickly.',dar:'نواكب المشاريع سريعة الحركة ونُسلّم حتى الأصناف المتخصصة بسرعة.'},
+ {en:'Quality at fair prices',ar:'جودة بأسعار عادلة',den:'Market-leading products at reasonable prices — value, not just volume.',dar:'منتجات رائدة بأسعار معقولة — قيمة حقيقية، لا مجرد كميات.'}
+];
+
+/* ===== FALLBACK for images ===== */
+function mediaFallback(img,label){
+  try{
+    if(img.dataset.fb)return; img.dataset.fb='1';
+    var p=img.parentElement; img.style.display='none';
+    var d=document.createElement('div'); d.className='media-fallback';
+    d.innerHTML='<svg viewBox="0 0 48 40" fill="none" stroke="#fff" stroke-width="2"><path d="M6 34V24a5 5 0 0110 0v10"/><path d="M19 34V17a6 6 0 0112 0v17"/><path d="M34 34V10a5.5 5.5 0 0111 0v24"/></svg><span>'+(label||'SHE')+'</span>';
+    p.appendChild(d);
+  }catch(e){}
+}
+window.mediaFallback=mediaFallback;
+
+/* ===== RENDER ===== */
+function el(tag,cls,html){var e=document.createElement(tag);if(cls)e.className=cls;if(html!=null)e.innerHTML=html;return e;}
+function txt(node){return LANG==='ar'?node.ar:node.en;}
+
+function renderSupply(){
+  var g=document.getElementById('supplyGrid'); if(!g)return; g.innerHTML='';
+  SUPPLY.forEach(function(s,i){
+    var n=('0'+(i+1)).slice(-2);
+    var subs=s.subs.map(function(x){return '<span>'+x+'</span>';}).join('');
+    var c=el('div','supply-card reveal',
+      '<svg class="arch-tab" viewBox="0 0 48 40" fill="none" stroke="currentColor" stroke-width="3"><path d="M6 34V24a5 5 0 0110 0v10"/><path d="M19 34V17a6 6 0 0112 0v17"/><path d="M34 34V10a5.5 5.5 0 0111 0v24"/></svg>'+
+      '<div class="num">'+n+'</div>'+
+      '<div class="ico">'+s.ico+'</div>'+
+      '<h3 data-en="'+s.en+'" data-ar="'+s.ar+'">'+s.en+'</h3>'+
+      '<div class="t-ar" data-en="'+s.ar+'" data-ar="'+s.en+'">'+s.ar+'</div>'+
+      '<p data-en="'+s.den+'" data-ar="'+s.dar+'">'+s.den+'</p>'+
+      '<div class="subs">'+subs+'</div>');
+    c.addEventListener('click',function(){c.classList.toggle('open');});
+    g.appendChild(c);
+  });
+  observeAll('.supply-card',g);
+}
+function renderSectors(){
+  var g=document.getElementById('sectorGrid'); if(!g)return; g.innerHTML='';
+  SECTORS.forEach(function(s){
+    var d=el('div','sector reveal',
+      '<div class="ph" style="position:absolute;inset:0"></div>'+
+      '<img src="'+s.img+'" alt="'+s.en+'" loading="lazy" decoding="async" onerror="mediaFallback(this,\''+s.en.replace(/'/g,'')+'\')">'+
+      '<div class="lbl"><span data-en="'+s.en+'" data-ar="'+s.ar+'">'+s.en+'</span><small data-en="'+s.ar+'" data-ar="'+s.en+'">'+s.ar+'</small></div>');
+    g.appendChild(d);
+  });
+  observeAll('.sector',g);
+}
+function renderWhy(){
+  var g=document.getElementById('whyGrid'); if(!g)return; g.innerHTML='';
+  WHY.forEach(function(w,i){
+    var n=('0'+(i+1)).slice(-2);
+    g.appendChild(el('div','why-card reveal',
+      '<div class="wn">'+n+'</div>'+
+      '<h4 data-en="'+w.en+'" data-ar="'+w.ar+'">'+w.en+'</h4>'+
+      '<p data-en="'+w.den+'" data-ar="'+w.dar+'">'+w.den+'</p>'));
+  });
+  observeAll('.why-card',g);
+}
+function renderPartners(){
+  var g=document.getElementById('partnerRow'); if(!g)return; g.innerHTML='';
+  for(var i=0;i<10;i++){
+    g.appendChild(el('div','partner-slot',
+      '<svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M8 12h8M12 8v8"/></svg>'+
+      '<span data-en="Partner" data-ar="شريك">Partner</span>'));
+  }
+}
+function renderFootLines(){
+  var g=document.getElementById('footLines'); if(!g)return; g.innerHTML='';
+  SUPPLY.slice(0,7).forEach(function(s){
+    var li=el('li'); li.innerHTML='<a href="#supply" data-en="'+s.en+'" data-ar="'+s.ar+'">'+s.en+'</a>';
+    g.appendChild(li);
+  });
+}
+function renderSelect(){
+  var sel=document.getElementById('f_line'); if(!sel)return; sel.innerHTML='';
+  var ph=el('option'); ph.value=''; ph.disabled=true; ph.selected=true;
+  ph.setAttribute('data-en','Select a product line…'); ph.setAttribute('data-ar','اختر خط المنتجات…');
+  ph.textContent='Select a product line…'; sel.appendChild(ph);
+  SUPPLY.forEach(function(s){
+    var o=el('option'); o.value=s.en; o.setAttribute('data-en',s.en); o.setAttribute('data-ar',s.ar);
+    o.textContent=s.en; sel.appendChild(o);
+  });
+  var o2=el('option'); o2.value='Multiple / Other'; o2.setAttribute('data-en','Multiple / Other'); o2.setAttribute('data-ar','متعدد / أخرى'); o2.textContent='Multiple / Other'; sel.appendChild(o2);
+}
+
+/* ===== LANGUAGE ===== */
+var LANG='en';
+function applyLang(l){
+  LANG=l;
+  var isAr=l==='ar';
+  document.documentElement.lang=isAr?'ar':'en';
+  document.documentElement.dir=isAr?'rtl':'ltr';
+  document.body.classList.toggle('ar',isAr);
+  document.querySelectorAll('[data-en]').forEach(function(n){
+    var v=isAr?n.getAttribute('data-ar'):n.getAttribute('data-en');
+    if(v==null)return;
+    if(n.tagName==='OPTION'){n.textContent=v;}
+    else{ n.innerHTML=v; }
+  });
+  document.querySelectorAll('[data-en-ph]').forEach(function(n){
+    n.setAttribute('placeholder',isAr?n.getAttribute('data-ar-ph'):n.getAttribute('data-en-ph'));
+  });
+  document.querySelectorAll('.lang-toggle .cur').forEach(function(c){c.textContent=isAr?'ع':'EN';});
+  try{localStorage.setItem('she_lang',l);}catch(e){}
+}
+function toggleLang(){applyLang(LANG==='ar'?'en':'ar');}
+
+/* ===== COUNT-UP ===== */
+var counted=false;
+function runCounts(){
+  if(counted)return; counted=true;
+  document.querySelectorAll('[data-count]').forEach(function(b){
+    var target=parseInt(b.getAttribute('data-count'),10);
+    var isYear=b.getAttribute('data-plain')==='1';
+    var start=isYear?1940:0, dur=1400, t0=null;
+    function step(ts){
+      if(!t0)t0=ts; var p=Math.min((ts-t0)/dur,1);
+      var eased=1-Math.pow(1-p,3);
+      var val=Math.round(start+(target-start)*eased);
+      b.textContent=val; if(p<1)requestAnimationFrame(step); else b.textContent=target;
+    }
+    requestAnimationFrame(step);
+  });
+}
+
+/* ===== NAV / MENU / SCROLL ===== */
+function initUI(){
+  var nav=document.getElementById('nav');
+  var onScroll=function(){ if(nav)nav.classList.toggle('scrolled',window.scrollY>40); };
+  onScroll(); addEventListener('scroll',onScroll,{passive:true});
+
+  var burger=document.getElementById('burger'), mm=document.getElementById('mmenu'), mc=document.getElementById('mclose');
+  function openM(){if(mm){mm.classList.add('open');burger&&burger.setAttribute('aria-expanded','true');}}
+  function closeM(){if(mm){mm.classList.remove('open');burger&&burger.setAttribute('aria-expanded','false');}}
+  burger&&burger.addEventListener('click',openM);
+  mc&&mc.addEventListener('click',closeM);
+  mm&&mm.querySelectorAll('a').forEach(function(a){a.addEventListener('click',closeM);});
+
+  var lb=document.getElementById('langBtn'), lbm=document.getElementById('langBtnM');
+  lb&&lb.addEventListener('click',toggleLang);
+  lbm&&lbm.addEventListener('click',function(){toggleLang();});
+
+  var y=document.getElementById('year'); if(y)y.textContent=new Date().getFullYear();
+}
+
+/* ===== RFQ FORM ===== */
+function initForm(){
+  var form=document.getElementById('rfqForm'); if(!form)return;
+  form.addEventListener('submit',function(ev){
+    ev.preventDefault();
+    var name=(document.getElementById('f_name').value||'').trim();
+    var company=(document.getElementById('f_company').value||'').trim();
+    var email=(document.getElementById('f_email').value||'').trim();
+    var phone=(document.getElementById('f_phone').value||'').trim();
+    var line=document.getElementById('f_line').value||'';
+    var msg=(document.getElementById('f_msg').value||'').trim();
+    if(!name||!email||!line||!msg){
+      [['f_name',name],['f_email',email],['f_line',line],['f_msg',msg]].forEach(function(f){
+        var elx=document.getElementById(f[0]); if(elx&&!f[1]){elx.style.borderColor='#c0392b';setTimeout(function(){elx.style.borderColor='';},2000);}
+      });
+      return;
+    }
+    var subject='RFQ — '+line+' — '+(company||name);
+    var bodyLines=[
+      'Request for Quotation — Saudi House of Expertise',
+      '',
+      'Name: '+name,
+      'Company: '+(company||'-'),
+      'Email: '+email,
+      'Phone: '+(phone||'-'),
+      'Product line: '+line,
+      '',
+      'Details:',
+      msg
+    ];
+    var params='subject='+encodeURIComponent(subject)+'&body='+encodeURIComponent(bodyLines.join('\n'));
+    var mailto='mailto:dr.khan@she.sa.com?'+params;
+    var s=document.getElementById('rfqSuccess');
+    if(form)form.style.display='none';
+    if(s)s.classList.add('show');
+    try{window.location.href=mailto;}catch(e){}
+  });
+}
+
+/* ===== CUSTOM CURSOR ===== */
+function initCursor(){
+  try{
+    if(!(window.matchMedia&&window.matchMedia('(hover:hover) and (pointer:fine)').matches))return;
+    var c=document.getElementById('cursor'), d=document.getElementById('cursor-dot');
+    if(!c||!d)return;
+    var cx=0,cy=0,dx=0,dy=0;
+    addEventListener('mousemove',function(e){cx=e.clientX;cy=e.clientY;d.style.left=cx+'px';d.style.top=cy+'px';});
+    function loop(){dx+=(cx-dx)*.18;dy+=(cy-dy)*.18;c.style.left=dx+'px';c.style.top=dy+'px';requestAnimationFrame(loop);}
+    loop();
+    document.querySelectorAll('a,button,.supply-card,.sector,.why-card').forEach(function(elx){
+      elx.addEventListener('mouseenter',function(){c.classList.add('big');});
+      elx.addEventListener('mouseleave',function(){c.classList.remove('big');});
+    });
+  }catch(e){}
+}
+
+/* ===== BOOT ===== */
+function boot(){
+  renderSupply(); renderSectors(); renderWhy(); renderPartners(); renderFootLines(); renderSelect();
+  observeAll('.reveal');
+  observe(document.getElementById('stats'));
+  initUI(); initForm(); initCursor();
+  var saved=null; try{saved=localStorage.getItem('she_lang');}catch(e){}
+  applyLang(saved==='ar'?'ar':'en');
+}
+if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',boot);}else{boot();}
+</script>
+</body>
+</html>

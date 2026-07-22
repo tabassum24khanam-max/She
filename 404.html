@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Page not found — SHE, Saudi House of Expertise</title>
+<meta name="robots" content="noindex">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 40'%3E%3Crect width='48' height='40' fill='%230A4D28'/%3E%3Cg fill='none' stroke='%231BA84A' stroke-width='3' stroke-linecap='round'%3E%3Cpath d='M8 34V24a4 4 0 018 0v10'/%3E%3Cpath d='M20 34V18a5 5 0 0110 0v16'/%3E%3Cpath d='M33 34V11a5.5 5.5 0 0111 0v23'/%3E%3C/g%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;700;800&family=Inter:wght@400;500&family=IBM+Plex+Sans+Arabic:wght@500&display=swap" rel="stylesheet">
+<style>
+:root{--green-bright:#1BA84A;--green-forest:#062E18;--green-deep:#0A4D28}
+*{margin:0;padding:0;box-sizing:border-box}
+body{
+  font-family:'Inter',system-ui,sans-serif;min-height:100vh;color:#fff;
+  background:radial-gradient(120% 90% at 100% 0,rgba(27,168,74,.28),transparent 55%),linear-gradient(150deg,var(--green-deep),var(--green-forest));
+  display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:40px;gap:8px;
+}
+svg.mark{width:110px;height:92px;margin-bottom:14px}
+svg.mark path{fill:none;stroke:var(--green-bright);stroke-width:3.2;stroke-linecap:round;stroke-dasharray:120;stroke-dashoffset:120;animation:d 1.3s cubic-bezier(.16,1,.3,1) forwards}
+svg.mark path:nth-child(2){animation-delay:.13s}
+svg.mark path:nth-child(3){animation-delay:.26s}
+@keyframes d{to{stroke-dashoffset:0}}
+.code{font-family:'Sora',sans-serif;font-weight:800;font-size:clamp(64px,16vw,140px);line-height:1;letter-spacing:-.03em;background:linear-gradient(#fff,rgba(255,255,255,.4));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+h1{font-family:'Sora',sans-serif;font-weight:700;font-size:clamp(20px,3vw,30px);margin-top:6px}
+p{color:rgba(255,255,255,.7);max-width:44ch;margin:12px 0 8px;line-height:1.6}
+.ar{font-family:'IBM Plex Sans Arabic';color:rgba(255,255,255,.5);font-size:.95rem}
+a.home{
+  margin-top:22px;display:inline-flex;align-items:center;gap:.6em;font-family:'Sora',sans-serif;font-weight:600;
+  background:var(--green-bright);color:#fff;text-decoration:none;padding:14px 26px;border-radius:100px;
+  transition:transform .25s,box-shadow .3s;box-shadow:0 12px 30px -12px rgba(27,168,74,.7)
+}
+a.home:hover{transform:translateY(-2px)}
+a.home svg{width:16px;height:16px}
+</style>
+</head>
+<body>
+  <svg class="mark" viewBox="0 0 96 80" aria-hidden="true">
+    <path d="M14 68V42a10 10 0 0120 0v26"/>
+    <path d="M38 68V30a12 12 0 0124 0v38"/>
+    <path d="M64 68V20a13 13 0 0126 0v48"/>
+  </svg>
+  <div class="code">404</div>
+  <h1>This page couldn't be sourced.</h1>
+  <p>The page you're looking for isn't here — but everything SHE supplies is one click away.</p>
+  <p class="ar">الصفحة التي تبحث عنها غير موجودة. عُد إلى الصفحة الرئيسية.</p>
+  <a class="home" href="index.html">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M11 6l-6 6 6 6"/></svg>
+    Back to home
+  </a>
+</body>
+</html>
