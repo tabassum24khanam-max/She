@@ -4,13 +4,13 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <title>SHE — Saudi House of Expertise | Supply & Procurement Since 1971</title>
-<meta name="description" content="Saudi House of Expertise (SHE) — a Saudi-owned single-source supply & procurement partner since 1971. Thirteen product lines, nationwide, from one point of contact.">
+<meta name="description" content="Saudi House of Expertise (SHE) — a Saudi-owned single-source supply & procurement partner since 1971. Twelve product lines, nationwide, from one point of contact.">
 <meta name="theme-color" content="#0A4D28">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 40'%3E%3Crect width='48' height='40' fill='%230A4D28'/%3E%3Cg fill='none' stroke='%231BA84A' stroke-width='3' stroke-linecap='round'%3E%3Cpath d='M8 34V24a4 4 0 018 0v10'/%3E%3Cpath d='M20 34V18a5 5 0 0110 0v16'/%3E%3Cpath d='M33 34V11a5.5 5.5 0 0111 0v23'/%3E%3C/g%3E%3C/svg%3E">
 <!-- Open Graph / Twitter -->
 <meta property="og:type" content="website">
 <meta property="og:title" content="SHE — Saudi House of Expertise | Supply & Procurement Since 1971">
-<meta property="og:description" content="A Saudi-owned single-source supply & procurement partner since 1971. Thirteen product lines, nationwide, from one point of contact.">
+<meta property="og:description" content="A Saudi-owned single-source supply & procurement partner since 1971. Twelve product lines, nationwide, from one point of contact.">
 <meta property="og:image" content="img/hero.jpg">
 <meta property="og:site_name" content="Saudi House of Expertise">
 <meta name="twitter:card" content="summary_large_image">
@@ -228,7 +228,7 @@ body.ar .hero-scrim{background:linear-gradient(255deg,rgba(6,46,24,.94) 0%,rgba(
 .about-media .badge span{font-size:.76rem;letter-spacing:.1em;text-transform:uppercase;opacity:.9}
 
 .timeline{margin-top:clamp(56px,7vw,90px)}
-.tl-track{position:relative;display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:40px}
+.tl-track{position:relative;display:grid;grid-template-columns:repeat(4,1fr);gap:24px;margin-top:40px}
 .tl-track::before{content:"";position:absolute;top:9px;inset-inline:6%;height:2px;background:linear-gradient(90deg,var(--green-bright),var(--line))}
 body.ar .tl-track::before{background:linear-gradient(270deg,var(--green-bright),var(--line))}
 .tl-item{position:relative;padding-top:34px}
@@ -396,6 +396,44 @@ footer{background:var(--green-forest);color:rgba(255,255,255,.72);position:relat
 .media-fallback svg{width:40px;opacity:.5}
 .media-fallback span{font-family:var(--font-head);font-size:.72rem;letter-spacing:.12em;text-transform:uppercase}
 
+/* ============ PROJECTS ============ */
+.project-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:48px}
+.project-card{position:relative;border-radius:14px;overflow:hidden;aspect-ratio:4/3;border:1px solid var(--line);background:var(--green-forest)}
+.project-card.is-hidden{display:none}
+.project-card img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:1;filter:saturate(.85) brightness(.8);transition:transform .6s var(--ease-hover),filter .5s}
+.project-card::after{content:"";position:absolute;inset:0;z-index:2;background:linear-gradient(to top,rgba(6,46,24,.94),rgba(6,46,24,.12) 66%)}
+.project-card:hover img{transform:scale(1.07);filter:saturate(1) brightness(.9)}
+.project-card .pc-body{position:absolute;inset-block-end:0;inset-inline-start:0;z-index:3;padding:16px}
+.project-card .pc-tag{font-family:var(--font-head);font-weight:600;font-size:.62rem;letter-spacing:.13em;text-transform:uppercase;color:var(--green-bright);margin-bottom:5px}
+.project-card h4{color:#fff;font-size:1.02rem;line-height:1.18}
+.project-card .pc-ar{font-family:'IBM Plex Sans Arabic';color:rgba(255,255,255,.72);font-size:.82rem;margin-top:3px}
+body.ar .project-card h4{font-family:'IBM Plex Sans Arabic'}
+.project-card .pc-rank{position:absolute;top:12px;inset-inline-end:12px;z-index:3;min-width:26px;height:26px;padding:0 6px;border-radius:100px;background:rgba(27,168,74,.92);color:#fff;font-family:var(--font-head);font-weight:700;font-size:.76rem;display:flex;align-items:center;justify-content:center}
+.proj-more-wrap{text-align:center;margin-top:34px}
+
+/* ============ CLIENTS MARQUEE ============ */
+#clients{background:var(--paper-2);overflow:hidden}
+.marquee-row{display:flex;gap:18px;width:max-content;animation:scrollx 42s linear infinite;margin-top:20px}
+.marquee-row.rev{animation-direction:reverse;animation-duration:56s}
+.marquee-mask{position:relative}
+.marquee-mask:hover .marquee-row{animation-play-state:paused}
+@keyframes scrollx{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+.client-tile{flex:none;width:184px;height:98px;background:#fff;border:1px solid var(--line);border-radius:12px;display:flex;align-items:center;justify-content:center;padding:16px 22px;transition:box-shadow .3s,transform .3s}
+.client-tile:hover{box-shadow:0 16px 34px -22px rgba(6,46,24,.5);transform:translateY(-3px)}
+.client-tile img{max-width:100%;max-height:100%;object-fit:contain;filter:grayscale(1) opacity(.7);transition:filter .35s}
+.client-tile:hover img{filter:grayscale(0) opacity(1)}
+
+/* ============ SUPPLY CAROUSEL ============ */
+.supply-carousel{position:relative;margin-top:44px}
+.supply-track{display:flex;gap:18px;overflow-x:auto;scroll-snap-type:x proximity;padding:6px 2px 20px;-webkit-overflow-scrolling:touch;scrollbar-width:none;cursor:grab}
+.supply-track.dragging{cursor:grabbing;scroll-snap-type:none}
+.supply-track::-webkit-scrollbar{display:none}
+.supply-track .supply-card{flex:none;width:min(320px,78vw);scroll-snap-align:center}
+.supply-hint{display:inline-flex;align-items:center;gap:8px;font-family:var(--font-head);font-weight:500;font-size:.8rem;color:var(--ink-soft);margin-top:8px}
+.supply-hint svg{width:24px;color:var(--green-bright);animation:nudge 1.8s var(--ease-hover) infinite}
+body.ar .supply-hint svg{transform:scaleX(-1)}
+@keyframes nudge{0%,100%{transform:translateX(0)}50%{transform:translateX(6px)}}
+
 /* ============ RESPONSIVE ============ */
 @media(max-width:960px){
   .nav-links{display:none}
@@ -408,6 +446,7 @@ footer{background:var(--green-forest);color:rgba(255,255,255,.72);position:relat
   .proc-grid{grid-template-columns:repeat(2,1fr);gap:30px}
   .proc-step .arch-con{display:none}
   .sector-grid{grid-template-columns:repeat(2,1fr)}
+  .project-grid{grid-template-columns:repeat(2,1fr)}
   .why-grid{grid-template-columns:1fr 1fr}
   .mvv{grid-template-columns:1fr}
   .contact-grid{grid-template-columns:1fr}
@@ -420,9 +459,11 @@ footer{background:var(--green-forest);color:rgba(255,255,255,.72);position:relat
   .foot-inner{grid-template-columns:1fr 1fr;gap:34px}
 }
 @media(max-width:560px){
-  .supply-grid{grid-template-columns:1fr}
   .why-grid{grid-template-columns:1fr}
   .sector-grid{grid-template-columns:1fr 1fr}
+  .project-grid{grid-template-columns:1fr 1fr;gap:12px}
+  .project-card h4{font-size:.92rem}
+  .client-tile{width:150px;height:84px}
   .field.two{grid-template-columns:1fr}
   .partner-row{grid-template-columns:repeat(2,1fr)}
   .foot-inner{grid-template-columns:1fr}
@@ -471,6 +512,7 @@ addEventListener('load',function(){setTimeout(h,600)});})();</script>
   </a>
   <nav class="nav-links" aria-label="Primary">
     <a href="#about" data-en="About" data-ar="من نحن">About</a>
+    <a href="#projects" data-en="Projects" data-ar="مشاريعنا">Projects</a>
     <a href="#supply" data-en="What We Supply" data-ar="ما نورّده">What We Supply</a>
     <a href="#process" data-en="How We Work" data-ar="كيف نعمل">How We Work</a>
     <a href="#sectors" data-en="Sectors" data-ar="القطاعات">Sectors</a>
@@ -489,6 +531,8 @@ addEventListener('load',function(){setTimeout(h,600)});})();</script>
 <div id="mmenu">
   <button id="mclose" aria-label="Close menu">&times;</button>
   <a href="#about"><span data-en="About" data-ar="من نحن">About</span><small data-en="من نحن" data-ar="About">من نحن</small></a>
+  <a href="#projects"><span data-en="Projects" data-ar="مشاريعنا">Projects</span><small data-en="مشاريعنا" data-ar="Projects">مشاريعنا</small></a>
+  <a href="#clients"><span data-en="Clients" data-ar="عملاؤنا">Clients</span><small data-en="عملاؤنا" data-ar="Clients">عملاؤنا</small></a>
   <a href="#supply"><span data-en="What We Supply" data-ar="ما نورّده">What We Supply</span><small data-en="ما نورّده" data-ar="What We Supply">ما نورّده</small></a>
   <a href="#process"><span data-en="How We Work" data-ar="كيف نعمل">How We Work</span><small data-en="كيف نعمل" data-ar="How We Work">كيف نعمل</small></a>
   <a href="#sectors"><span data-en="Sectors" data-ar="القطاعات">Sectors</span><small data-en="القطاعات" data-ar="Sectors">القطاعات</small></a>
@@ -512,7 +556,7 @@ addEventListener('load',function(){setTimeout(h,600)});})();</script>
       <span data-en="Your single-source supply &amp; procurement partner" data-ar="شريكك الموحّد للتوريد والمشتريات">Your single-source supply &amp; procurement partner</span>
       <em data-en="since 1971." data-ar="منذ عام ١٩٧١.">since 1971.</em>
     </h1>
-    <p class="hero-sub hero-anim d2" data-en="Saudi House of Expertise sources, procures and delivers thirteen product lines to projects and institutions across the Kingdom — from one accountable point of contact." data-ar="دار الخبرات السعودية توفّر وتشتري وتُسلّم ثلاثة عشر خط منتجات للمشاريع والمؤسسات في جميع أنحاء المملكة — من نقطة اتصال واحدة مسؤولة.">Saudi House of Expertise sources, procures and delivers thirteen product lines to projects and institutions across the Kingdom — from one accountable point of contact.</p>
+    <p class="hero-sub hero-anim d2" data-en="Saudi House of Expertise sources, procures and delivers twelve product lines to projects and institutions across the Kingdom — from one accountable point of contact." data-ar="دار الخبرات السعودية توفّر وتشتري وتُسلّم اثني عشر خط منتجات للمشاريع والمؤسسات في جميع أنحاء المملكة — من نقطة اتصال واحدة مسؤولة.">Saudi House of Expertise sources, procures and delivers twelve product lines to projects and institutions across the Kingdom — from one accountable point of contact.</p>
     <div class="hero-cta hero-anim d3">
       <a href="#contact" class="btn btn-primary" data-en="Request a Quote" data-ar="اطلب عرض سعر">Request a Quote
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
@@ -523,7 +567,7 @@ addEventListener('load',function(){setTimeout(h,600)});})();</script>
       <span data-en="Est. 1971" data-ar="تأسست ١٩٧١">Est. 1971</span>
       <span data-en="Riyadh HQ" data-ar="المقر: الرياض">Riyadh HQ</span>
       <span data-en="Nationwide coverage" data-ar="تغطية وطنية">Nationwide coverage</span>
-      <span data-en="13 product lines" data-ar="١٣ خط منتجات">13 product lines</span>
+      <span data-en="12 product lines" data-ar="١٢ خط منتجات">12 product lines</span>
     </div>
   </div>
   <div class="scroll-hint" aria-hidden="true"><span data-en="Scroll" data-ar="مرّر">Scroll</span><i></i></div>
@@ -535,7 +579,7 @@ addEventListener('load',function(){setTimeout(h,600)});})();</script>
   <div class="stats-grid">
     <div class="stat"><b data-count="1971" data-plain="1">1971</b><span data-en="Year founded" data-ar="سنة التأسيس">Year founded</span></div>
     <div class="stat"><b><span data-count="54">54</span><span class="plus">+</span></b><span data-en="Years of service" data-ar="عاماً من الخدمة">Years of service</span></div>
-    <div class="stat"><b data-count="13">13</b><span data-en="Product lines" data-ar="خطوط منتجات">Product lines</span></div>
+    <div class="stat"><b data-count="12">12</b><span data-en="Product lines" data-ar="خطوط منتجات">Product lines</span></div>
     <div class="stat"><b data-en="Nationwide" data-ar="وطنية">Nationwide</b><span data-en="Delivery coverage" data-ar="تغطية التسليم">Delivery coverage</span></div>
   </div>
 </section>
@@ -552,6 +596,7 @@ addEventListener('load',function(){setTimeout(h,600)});})();</script>
       <div class="expert-tags reveal d3">
         <span class="tag" data-en="Engineers" data-ar="مهندسون">Engineers</span>
         <span class="tag" data-en="Safety experts" data-ar="خبراء سلامة">Safety experts</span>
+        <span class="tag" data-en="Backup-power engineers" data-ar="مهندسو الطاقة الاحتياطية">Backup-power engineers</span>
         <span class="tag" data-en="Food experts" data-ar="خبراء أغذية">Food experts</span>
         <span class="tag" data-en="Pharmacists" data-ar="صيادلة">Pharmacists</span>
       </div>
@@ -559,7 +604,7 @@ addEventListener('load',function(){setTimeout(h,600)});})();</script>
     <div class="about-media reveal d1">
       <div class="frame">
         <div class="ph" style="position:absolute;inset:0"></div>
-        <img src="img/heritage.jpg" alt="Established institution in the Kingdom of Saudi Arabia" loading="lazy" decoding="async" onerror="mediaFallback(this,'Since 1971')">
+        <img src="img/riyadh.jpg" alt="Riyadh skyline — SHE's home since 1971" loading="lazy" decoding="async" onerror="mediaFallback(this,'Riyadh, KSA')">
       </div>
       <div class="badge"><b>54<span style="font-size:1.3rem">+</span></b><span data-en="Years in the Kingdom" data-ar="عاماً في المملكة">Years in the Kingdom</span></div>
     </div>
@@ -584,11 +629,42 @@ addEventListener('load',function(){setTimeout(h,600)});})();</script>
       </div>
       <div class="tl-item reveal d3">
         <div class="dot"></div>
-        <div class="yr data-en" data-en="Today" data-ar="اليوم">Today</div>
+        <div class="yr" data-en="Today" data-ar="اليوم">Today</div>
         <h4 data-en="Diversified trading &amp; procurement" data-ar="تجارة ومشتريات متنوّعة">Diversified trading &amp; procurement</h4>
-        <p data-en="SHE supplies thirteen product lines — from construction and healthcare to safety, electrical and industrial — as a single-source partner across the Kingdom." data-ar="توفّر SHE ثلاثة عشر خط منتجات — من الإنشاءات والرعاية الصحية إلى السلامة والكهرباء والصناعة — كشريك موحّد في جميع أنحاء المملكة.">SHE supplies thirteen product lines — from construction and healthcare to safety, electrical and industrial — as a single-source partner across the Kingdom.</p>
+        <p data-en="SHE supplies twelve product lines — from construction and healthcare to safety, electrical and industrial — as a single-source partner across the Kingdom." data-ar="توفّر SHE اثني عشر خط منتجات — من الإنشاءات والرعاية الصحية إلى السلامة والكهرباء والصناعة — كشريك موحّد في جميع أنحاء المملكة.">SHE supplies twelve product lines — from construction and healthcare to safety, electrical and industrial — as a single-source partner across the Kingdom.</p>
+      </div>
+      <div class="tl-item reveal d3">
+        <div class="dot"></div>
+        <div class="yr" data-en="Vision 2030" data-ar="رؤية ٢٠٣٠">Vision 2030</div>
+        <h4 data-en="Supplying the Kingdom's giga-projects" data-ar="توريد للمشاريع الكبرى في المملكة">Supplying the Kingdom's giga-projects</h4>
+        <p data-en="Today SHE supports many of Saudi Arabia's landmark developments — from KAFD and Qiddiya to NEOM, ROSHN and the Riyadh Metro — as part of the nation's transformation." data-ar="تدعم SHE اليوم العديد من مشاريع المملكة الكبرى — من مركز الملك عبدالله المالي والقدية إلى نيوم وروشن ومترو الرياض — ضمن مسيرة التحوّل الوطني.">Today SHE supports many of Saudi Arabia's landmark developments — from KAFD and Qiddiya to NEOM, ROSHN and the Riyadh Metro — as part of the nation's transformation.</p>
       </div>
     </div>
+  </div>
+</section>
+
+<!-- ============ WHERE WE'VE WORKED (PROJECTS) ============ -->
+<section id="projects" class="section">
+  <div class="eyebrow reveal" data-en="02 — Where We've Worked" data-ar="٠٢ — أين عملنا">02 — Where We've Worked</div>
+  <h2 class="h-lg reveal d1" style="margin-top:16px;max-width:20ch" data-en="Supplying the projects shaping the Kingdom." data-ar="نورّد للمشاريع التي تصنع ملامح المملكة.">Supplying the projects shaping the Kingdom.</h2>
+  <p class="lead reveal d2" style="max-width:56ch" data-en="From flagship financial districts to giga-projects and national infrastructure, SHE has supplied materials and equipment to landmark developments across Saudi Arabia." data-ar="من المراكز المالية الكبرى إلى المشاريع العملاقة والبنية التحتية الوطنية، وفّرت SHE المواد والمعدات لأبرز المشاريع في جميع أنحاء المملكة.">From flagship financial districts to giga-projects and national infrastructure, SHE has supplied materials and equipment to landmark developments across Saudi Arabia.</p>
+  <div class="project-grid" id="projectGrid"></div>
+  <div class="proj-more-wrap">
+    <button class="btn btn-ghost" id="projMore" data-en="View more projects" data-ar="عرض المزيد من المشاريع">View more projects</button>
+  </div>
+  <p class="form-note reveal" style="margin-top:16px;text-align:center" data-en="Project imagery is representative; official project photos to be supplied by SHE." data-ar="صور المشاريع توضيحية؛ سيتم تزويد الصور الرسمية من قبل SHE.">Project imagery is representative; official project photos to be supplied by SHE.</p>
+</section>
+
+<!-- ============ WHO WE'VE WORKED WITH (CLIENTS) ============ -->
+<section id="clients" class="section-wide">
+  <div style="max-width:var(--maxw);margin-inline:auto;padding-inline:var(--pad)">
+    <div class="eyebrow reveal" data-en="03 — Who We've Worked With" data-ar="٠٣ — من عملنا معهم">03 — Who We've Worked With</div>
+    <h2 class="h-lg reveal d1" style="margin-top:16px;max-width:22ch" data-en="Trusted alongside the Kingdom's leading contractors." data-ar="موضع ثقة إلى جانب كبرى شركات المقاولات في المملكة.">Trusted alongside the Kingdom's leading contractors.</h2>
+    <p class="lead reveal d2" style="max-width:54ch" data-en="We've supplied and partnered with major contractors and groups delivering Saudi Arabia's most important projects." data-ar="قمنا بالتوريد والشراكة مع كبرى شركات المقاولات والمجموعات التي تنفّذ أهم مشاريع المملكة.">We've supplied and partnered with major contractors and groups delivering Saudi Arabia's most important projects.</p>
+  </div>
+  <div class="marquee-mask" style="margin-top:40px">
+    <div class="marquee-row" id="clientRow1" aria-label="Client logos"></div>
+    <div class="marquee-row rev" id="clientRow2" aria-hidden="true"></div>
   </div>
 </section>
 
@@ -597,18 +673,24 @@ addEventListener('load',function(){setTimeout(h,600)});})();</script>
   <div style="max-width:var(--maxw);margin-inline:auto;padding-inline:var(--pad)">
     <div class="supply-head">
       <div>
-        <div class="eyebrow reveal" data-en="02 — What We Supply" data-ar="٠٢ — ما نورّده">02 — What We Supply</div>
-        <h2 class="h-lg reveal d1" style="margin-top:16px" data-en="Thirteen product lines. One point of contact." data-ar="ثلاثة عشر خط منتجات. نقطة اتصال واحدة.">Thirteen product lines. One point of contact.</h2>
+        <div class="eyebrow reveal" data-en="04 — What We Supply" data-ar="٠٤ — ما نورّده">04 — What We Supply</div>
+        <h2 class="h-lg reveal d1" style="margin-top:16px" data-en="Twelve product lines. One point of contact." data-ar="اثنا عشر خط منتجات. نقطة اتصال واحدة.">Twelve product lines. One point of contact.</h2>
       </div>
-      <p class="lead reveal d2" style="max-width:34ch" data-en="Hover a line to see representative items. Everything is sourced, quality-checked and delivered by SHE." data-ar="مرّر على أي خط لرؤية أمثلة من المنتجات. كل شيء يتم توفيره وفحص جودته وتسليمه بواسطة SHE.">Hover a line to see representative items. Everything is sourced, quality-checked and delivered by SHE.</p>
+      <p class="lead reveal d2" style="max-width:34ch" data-en="Swipe through the lines — they scroll on their own. Everything is sourced, quality-checked and delivered by SHE." data-ar="اسحب عبر الخطوط — تتحرّك تلقائياً. كل شيء يتم توفيره وفحص جودته وتسليمه بواسطة SHE.">Swipe through the lines — they scroll on their own. Everything is sourced, quality-checked and delivered by SHE.</p>
     </div>
-    <div class="supply-grid" id="supplyGrid"></div>
+    <div class="supply-hint reveal" aria-hidden="true">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      <span data-en="Drag or swipe to explore all twelve" data-ar="اسحب لاستكشاف جميع الخطوط الاثني عشر">Drag or swipe to explore all twelve</span>
+    </div>
+    <div class="supply-carousel">
+      <div class="supply-track" id="supplyGrid"></div>
+    </div>
   </div>
 </section>
 
 <!-- ============ HOW WE WORK ============ -->
 <section id="process" class="section">
-  <div class="eyebrow reveal" data-en="03 — How We Work" data-ar="٠٣ — كيف نعمل">03 — How We Work</div>
+  <div class="eyebrow reveal" data-en="05 — How We Work" data-ar="٠٥ — كيف نعمل">05 — How We Work</div>
   <h2 class="h-lg reveal d1" style="margin-top:16px;max-width:20ch" data-en="A managed supply chain, from source to site." data-ar="سلسلة توريد مُدارة، من المصدر إلى الموقع.">A managed supply chain, from source to site.</h2>
   <div class="proc-grid">
     <div class="proc-step reveal d1">
@@ -640,7 +722,7 @@ addEventListener('load',function(){setTimeout(h,600)});})();</script>
 <!-- ============ SECTORS ============ -->
 <section id="sectors" class="section-wide">
   <div style="max-width:var(--maxw);margin-inline:auto;padding-inline:var(--pad)">
-    <div class="eyebrow reveal" data-en="04 — Sectors We Serve" data-ar="٠٤ — القطاعات التي نخدمها">04 — Sectors We Serve</div>
+    <div class="eyebrow reveal" data-en="06 — Sectors We Serve" data-ar="٠٦ — القطاعات التي نخدمها">06 — Sectors We Serve</div>
     <h2 class="h-lg reveal d1" style="margin-top:16px;max-width:22ch" data-en="Trusted by the sectors that build the Kingdom." data-ar="موضع ثقة القطاعات التي تبني المملكة.">Trusted by the sectors that build the Kingdom.</h2>
     <div class="sector-grid" id="sectorGrid"></div>
   </div>
@@ -648,7 +730,7 @@ addEventListener('load',function(){setTimeout(h,600)});})();</script>
 
 <!-- ============ WHY SHE ============ -->
 <section class="section">
-  <div class="eyebrow reveal" data-en="05 — Why SHE" data-ar="٠٥ — لماذا SHE">05 — Why SHE</div>
+  <div class="eyebrow reveal" data-en="07 — Why SHE" data-ar="٠٧ — لماذا SHE">07 — Why SHE</div>
   <h2 class="h-lg reveal d1" style="margin-top:16px;max-width:20ch" data-en="Confidence through specificity, not slogans." data-ar="ثقة قائمة على التحديد، لا على الشعارات.">Confidence through specificity, not slogans.</h2>
   <div class="why-grid" id="whyGrid"></div>
 </section>
@@ -657,7 +739,7 @@ addEventListener('load',function(){setTimeout(h,600)});})();</script>
 <section id="mission">
   <div class="authority-img"><img src="img/authority.jpg" alt="" aria-hidden="true" loading="lazy" decoding="async" onerror="this.style.display='none'"></div>
   <div class="inner">
-    <div class="eyebrow reveal" data-en="06 — Mission &amp; Values" data-ar="٠٦ — رسالتنا وقيمنا">06 — Mission &amp; Values</div>
+    <div class="eyebrow reveal" data-en="08 — Mission &amp; Values" data-ar="٠٨ — رسالتنا وقيمنا">08 — Mission &amp; Values</div>
     <h2 class="h-lg reveal d1" style="margin-top:16px;max-width:24ch" data-en="What we hold ourselves to." data-ar="ما نلتزم به تجاه عملائنا.">What we hold ourselves to.</h2>
     <div class="mvv">
       <div class="card reveal d1">
@@ -692,18 +774,10 @@ addEventListener('load',function(){setTimeout(h,600)});})();</script>
   </div>
 </section>
 
-<!-- ============ PARTNERS ============ -->
-<section class="section">
-  <div class="eyebrow reveal" data-en="Principals &amp; Partners" data-ar="الموكّلون والشركاء">Principals &amp; Partners</div>
-  <h3 class="h-md reveal d1" style="margin-top:14px;max-width:30ch" data-en="We source from reputed local and international manufacturers." data-ar="نوفّر من مصنّعين محليين ودوليين مرموقين.">We source from reputed local and international manufacturers.</h3>
-  <div class="partner-row reveal d1" id="partnerRow"></div>
-  <p class="form-note reveal d2" style="margin-top:16px" data-en="Placeholder slots — real principal and partner logos to be supplied by SHE." data-ar="خانات مؤقتة — سيتم تزويد شعارات الموكّلين والشركاء الفعلية من قبل SHE.">Placeholder slots — real principal and partner logos to be supplied by SHE.</p>
-</section>
-
 <!-- ============ RFQ + CONTACT ============ -->
 <section id="contact" class="section-wide">
   <div style="max-width:var(--maxw);margin-inline:auto;padding-inline:var(--pad)">
-    <div class="eyebrow reveal" data-en="07 — Request a Quote" data-ar="٠٧ — اطلب عرض سعر">07 — Request a Quote</div>
+    <div class="eyebrow reveal" data-en="09 — Request a Quote" data-ar="٠٩ — اطلب عرض سعر">09 — Request a Quote</div>
     <h2 class="h-lg reveal d1" style="margin:16px 0 44px;max-width:22ch" data-en="Tell us what you need supplied." data-ar="أخبرنا بما تحتاج إلى توريده.">Tell us what you need supplied.</h2>
     <div class="contact-grid">
       <!-- RFQ FORM -->
@@ -876,8 +950,42 @@ var SUPPLY=[
  {ico:'<svg viewBox="0 0 24 24"><path d="M3 10h18v10H3zM6 10V6a2 2 0 012-2h8a2 2 0 012 2v4M8 20v-4M16 20v-4"/></svg>',en:'Furniture & Accessories',ar:'الأثاث وملحقاته',den:'Office, institutional and site furniture with all accessories.',dar:'أثاث مكتبي ومؤسسي وموقعي مع كل الملحقات.',subs:['Office furniture','Storage & shelving','Seating','Fixtures']},
  {ico:'<svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M5 5l2 2M17 17l2 2M19 5l-2 2M7 17l-2 2"/></svg>',en:'Mechanical Supplies',ar:'التوريدات الميكانيكية',den:'Mechanical parts, tools and components for maintenance and operations.',dar:'قطع وأدوات ومكونات ميكانيكية للصيانة والتشغيل.',subs:['Fasteners & bearings','Hand & power tools','Pumps & valves','Spare parts']},
  {ico:'<svg viewBox="0 0 24 24"><path d="M2 20h20M4 20V8l8-5 8 5v12M9 20v-5h6v5"/><path d="M4 12h16"/></svg>',en:'Industrial Installation Supplies',ar:'مستلزمات التركيبات الصناعية',den:'Materials and equipment for industrial installations and fit-outs.',dar:'مواد ومعدات للتركيبات والتجهيزات الصناعية.',subs:['Piping & ducting','Structural fixings','Industrial fittings','Site equipment']},
- {ico:'<svg viewBox="0 0 24 24"><path d="M1 3h15v13H1zM16 8h4l3 3v5h-7"/><circle cx="5.5" cy="18.5" r="2"/><circle cx="18.5" cy="18.5" r="2"/></svg>',en:'Transport & Transport Supplies',ar:'النقل ومستلزماته',den:'Transport equipment and supplies supporting nationwide operations.',dar:'معدات ومستلزمات نقل تدعم العمليات على مستوى المملكة.',subs:['Vehicle supplies','Spare parts','Logistics equipment','Accessories']},
  {ico:'<svg viewBox="0 0 24 24"><path d="M6 2l3 4 3-2 3 2 3-4v9a4 4 0 01-4 4H10a4 4 0 01-4-4V2z"/><path d="M9 22h6"/></svg>',en:'Uniforms for All Sectors',ar:'الأزياء الموحدة لجميع القطاعات',den:'Workwear and uniforms tailored for every industry and role.',dar:'ملابس عمل وأزياء موحّدة مصممة لكل قطاع ودور.',subs:['Industrial workwear','Medical scrubs','Corporate uniforms','Hospitality attire']}
+];
+/* Projects — ranked by prestige & opportunity. Photos are representative/illustrative. */
+var PROJECTS=[
+ {img:'img/projects/kafd.jpg',en:'King Abdullah Financial District',ar:'مركز الملك عبدالله المالي',tag:'KAFD · Riyadh'},
+ {img:'img/projects/qiddiya.jpg',en:'Qiddiya',ar:'القدية',tag:'Entertainment City · Riyadh'},
+ {img:'img/projects/neom.jpg',en:'NEOM',ar:'نيوم',tag:'Giga-project · Tabuk'},
+ {img:'img/projects/roshn.jpg',en:'ROSHN',ar:'روشن',tag:'Communities · Kingdom-wide'},
+ {img:'img/projects/riyadh-metro.jpg',en:'Riyadh Metro',ar:'مترو الرياض',tag:'Transit · Riyadh'},
+ {img:'img/projects/kapsarc.jpg',en:'KAPSARC',ar:'كابسارك',tag:'Research City · Riyadh'},
+ {img:'img/projects/itcc.jpg',en:'ITCC',ar:'مجمع تقنية المعلومات',tag:'IT & Comms Complex · Riyadh'},
+ {img:'img/projects/sdaia.jpg',en:'SDAIA Headquarters',ar:'مقر سدايا',tag:'Data & AI Authority · Riyadh'},
+ {img:'img/projects/ksab.jpg',en:'King Salman Air Base',ar:'قاعدة الملك سلمان الجوية',tag:'Defense · Riyadh'},
+ {img:'img/projects/kfaa.jpg',en:'King Faisal Air Academy',ar:'كلية الملك فيصل الجوية',tag:'Defense · Al-Majma’ah'},
+ {img:'img/projects/national-guard.jpg',en:'National Guard Facilities',ar:'مرافق الحرس الوطني',tag:'Government · Riyadh'},
+ {img:'img/projects/saudi-railway.jpg',en:'Saudi Railway (SAR)',ar:'الخطوط الحديدية السعودية',tag:'Rail · Kingdom-wide'}
+];
+/* Clients — real logos extracted from client references. */
+var CLIENTS=[
+ {img:'img/clients/al-bawani.png',name:'Al Bawani'},
+ {img:'img/clients/al-rajhi.png',name:'Al-Rajhi Building & Constructions'},
+ {img:'img/clients/nesma.png',name:'Nesma & Partners'},
+ {img:'img/clients/shapoorji.png',name:'Shapoorji Pallonji'},
+ {img:'img/clients/webuild.png',name:'WeBuild (Salini Impregilo)'},
+ {img:'img/clients/al-muhaidib.png',name:'Al Muhaidib'},
+ {img:'img/clients/drake-scull.png',name:'Drake & Scull'},
+ {img:'img/clients/nas-jv.png',name:'NAS Joint Venture'},
+ {img:'img/clients/bss-jv.png',name:'BSS Joint Venture'},
+ {img:'img/clients/ghantoot.png',name:'Ghantoot Group'},
+ {img:'img/clients/otis.png',name:'Otis'},
+ {img:'img/clients/al-tayyar.png',name:'Al Tayyar'},
+ {img:'img/clients/casa-piu.png',name:'Casa Piu'},
+ {img:'img/clients/masa.png',name:'MASA'},
+ {img:'img/clients/kudu.png',name:'Kudu'},
+ {img:'img/clients/shamel.png',name:'Shamel International'},
+ {img:'img/clients/shaleem.png',name:'Shaleem Petroleum'}
 ];
 var SECTORS=[
  {img:'img/construction.jpg',en:'Construction & Contracting',ar:'الإنشاءات والمقاولات'},
@@ -887,10 +995,10 @@ var SECTORS=[
  {img:'img/office.jpg',en:'Offices & Corporate',ar:'المكاتب والشركات'},
  {img:'img/transport.jpg',en:'Transport & Logistics',ar:'النقل والخدمات اللوجستية'},
  {img:'img/logistics.jpg',en:'Facilities & Security',ar:'المرافق والأمن'},
- {img:'img/heritage.jpg',en:'Hospitality & Services',ar:'الضيافة والخدمات'}
+ {img:'img/hospitality.jpg',en:'Hospitality & Services',ar:'الضيافة والخدمات'}
 ];
 var WHY=[
- {en:'One point of contact',ar:'نقطة اتصال واحدة',den:'Thirteen product lines from a single accountable partner — not a dozen scattered vendors.',dar:'ثلاثة عشر خط منتجات من شريك واحد مسؤول — بدلاً من عشرات المورّدين المتفرقين.'},
+ {en:'One point of contact',ar:'نقطة اتصال واحدة',den:'Twelve product lines from a single accountable partner — not a dozen scattered vendors.',dar:'اثنا عشر خط منتجات من شريك واحد مسؤول — بدلاً من عشرات المورّدين المتفرقين.'},
  {en:'50+ years of reliability',ar:'أكثر من ٥٠ عاماً من الموثوقية',den:'A Saudi-owned house trading since 1971, with a proven, nationwide track record.',dar:'بيت خبرة سعودي يعمل بالتجارة منذ ١٩٧١، بسجل حافل على مستوى المملكة.'},
  {en:'An expert team',ar:'فريق من الخبراء',den:'Engineers, pharmacists, food and safety experts vet what we supply.',dar:'مهندسون وصيادلة وخبراء أغذية وسلامة يفحصون ما نورّده.'},
  {en:'Local + global sourcing',ar:'توريد محلي وعالمي',den:'Strategic partnerships let us procure quality products at the best value.',dar:'شراكات استراتيجية تتيح لنا شراء منتجات عالية الجودة بأفضل قيمة.'},
@@ -919,7 +1027,7 @@ function renderSupply(){
   SUPPLY.forEach(function(s,i){
     var n=('0'+(i+1)).slice(-2);
     var subs=s.subs.map(function(x){return '<span>'+x+'</span>';}).join('');
-    var c=el('div','supply-card reveal',
+    var c=el('div','supply-card',
       '<svg class="arch-tab" viewBox="0 0 48 40" fill="none" stroke="currentColor" stroke-width="3"><path d="M6 34V24a5 5 0 0110 0v10"/><path d="M19 34V17a6 6 0 0112 0v17"/><path d="M34 34V10a5.5 5.5 0 0111 0v24"/></svg>'+
       '<div class="num">'+n+'</div>'+
       '<div class="ico">'+s.ico+'</div>'+
@@ -930,7 +1038,6 @@ function renderSupply(){
     c.addEventListener('click',function(){c.classList.toggle('open');});
     g.appendChild(c);
   });
-  observeAll('.supply-card',g);
 }
 function renderSectors(){
   var g=document.getElementById('sectorGrid'); if(!g)return; g.innerHTML='';
@@ -954,13 +1061,66 @@ function renderWhy(){
   });
   observeAll('.why-card',g);
 }
-function renderPartners(){
-  var g=document.getElementById('partnerRow'); if(!g)return; g.innerHTML='';
-  for(var i=0;i<10;i++){
-    g.appendChild(el('div','partner-slot',
-      '<svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M8 12h8M12 8v8"/></svg>'+
-      '<span data-en="Partner" data-ar="شريك">Partner</span>'));
+var PROJ_INIT=8;
+function renderProjects(){
+  var g=document.getElementById('projectGrid'); if(!g)return; g.innerHTML='';
+  PROJECTS.forEach(function(p,i){
+    var hidden=i>=PROJ_INIT?' is-hidden':'';
+    var d=el('div','project-card reveal'+hidden,
+      '<div class="ph" style="position:absolute;inset:0;z-index:0"></div>'+
+      '<img src="'+p.img+'" alt="'+p.en+'" loading="lazy" decoding="async" onerror="mediaFallback(this,\''+p.en.replace(/'/g,'')+'\')">'+
+      '<div class="pc-rank">'+(i+1)+'</div>'+
+      '<div class="pc-body">'+
+        '<div class="pc-tag">'+p.tag+'</div>'+
+        '<h4 data-en="'+p.en+'" data-ar="'+p.ar+'">'+p.en+'</h4>'+
+        '<div class="pc-ar" data-en="'+p.ar+'" data-ar="'+p.en+'">'+p.ar+'</div>'+
+      '</div>');
+    g.appendChild(d);
+  });
+  observeAll('.project-card:not(.is-hidden)',g);
+  var btn=document.getElementById('projMore');
+  if(btn){
+    btn.addEventListener('click',function(){
+      g.querySelectorAll('.project-card.is-hidden').forEach(function(c){c.classList.remove('is-hidden');observe(c);});
+      btn.style.display='none';
+    });
   }
+}
+function renderClients(){
+  function tile(c){
+    return '<div class="client-tile" title="'+c.name+'"><img src="'+c.img+'" alt="'+c.name+'" loading="lazy" decoding="async" onerror="mediaFallback(this,\''+c.name.replace(/'/g,'')+'\')"></div>';
+  }
+  var r1=document.getElementById('clientRow1'), r2=document.getElementById('clientRow2');
+  // duplicate each row's content so the -50% marquee loops seamlessly
+  if(r1){ var s1=CLIENTS.map(tile).join(''); r1.innerHTML=s1+s1; }
+  if(r2){ var rev=CLIENTS.slice().reverse().map(tile).join(''); r2.innerHTML=rev+rev; }
+}
+function initSupplyCarousel(){
+  var t=document.getElementById('supplyGrid'); if(!t)return;
+  // drag-to-scroll (pointer)
+  var down=false,startX=0,startL=0,moved=false;
+  t.addEventListener('pointerdown',function(e){down=true;moved=false;startX=e.clientX;startL=t.scrollLeft;t.classList.add('dragging');});
+  addEventListener('pointermove',function(e){if(!down)return;var dx=e.clientX-startX;if(Math.abs(dx)>4)moved=true;t.scrollLeft=startL-dx;});
+  addEventListener('pointerup',function(){down=false;t.classList.remove('dragging');});
+  // suppress click (card toggle) right after a drag
+  t.addEventListener('click',function(e){if(moved){e.stopPropagation();e.preventDefault();}},true);
+  // auto ping-pong scroll
+  var reduce=false; try{reduce=window.matchMedia&&window.matchMedia('(prefers-reduced-motion:reduce)').matches;}catch(e){}
+  if(reduce)return;
+  var dir=1,paused=false,speed=.45;
+  ['pointerenter','pointerdown','touchstart','focusin'].forEach(function(ev){t.addEventListener(ev,function(){paused=true;});});
+  ['pointerleave','pointerup','touchend'].forEach(function(ev){t.addEventListener(ev,function(){paused=false;});});
+  function tick(){
+    if(!paused){
+      var max=t.scrollWidth-t.clientWidth-1;
+      if(max>2){
+        t.scrollLeft+=dir*speed;
+        if(t.scrollLeft>=max){dir=-1;} else if(t.scrollLeft<=0){dir=1;}
+      }
+    }
+    requestAnimationFrame(tick);
+  }
+  requestAnimationFrame(tick);
 }
 function renderFootLines(){
   var g=document.getElementById('footLines'); if(!g)return; g.innerHTML='';
@@ -1099,10 +1259,10 @@ function initCursor(){
 
 /* ===== BOOT ===== */
 function boot(){
-  renderSupply(); renderSectors(); renderWhy(); renderPartners(); renderFootLines(); renderSelect();
+  renderSupply(); renderProjects(); renderClients(); renderSectors(); renderWhy(); renderFootLines(); renderSelect();
   observeAll('.reveal');
   observe(document.getElementById('stats'));
-  initUI(); initForm(); initCursor();
+  initUI(); initForm(); initCursor(); initSupplyCarousel();
   var saved=null; try{saved=localStorage.getItem('she_lang');}catch(e){}
   applyLang(saved==='ar'?'ar':'en');
 }
