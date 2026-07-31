@@ -113,6 +113,7 @@ body.ar .btn-primary::before{transform:translateX(101%)}
 #loader.hide{opacity:0;visibility:hidden}
 #loader.gone{display:none}
 #loader svg{width:96px;height:80px}
+#loader .loader-logo{height:120px;width:auto;object-fit:contain;opacity:0;animation:fadeUp .6s .2s var(--ease-in) forwards}
 #loader .arch{
   fill:none;stroke:var(--green-bright);stroke-width:3.4;stroke-linecap:round;
   stroke-dasharray:120;stroke-dashoffset:120;animation:draw 1.5s var(--ease-in) forwards;
@@ -137,6 +138,7 @@ header#nav.scrolled .brand{color:var(--green-forest)}
 .brand .mark{width:40px;height:34px;flex:none}
 .brand .mark path{stroke:var(--green-bright);stroke-width:3.2;fill:none;stroke-linecap:round}
 header#nav.scrolled .brand .mark path{stroke:var(--green)}
+.brand .logo-mark{height:48px;width:auto;flex:none;object-fit:contain}
 .brand .wm{display:flex;flex-direction:column;line-height:1}
 .brand .wm b{font-family:var(--font-head);font-weight:800;font-size:1.28rem;letter-spacing:.14em}
 .brand .wm span{font-size:.6rem;letter-spacing:.12em;opacity:.72;margin-top:3px;text-transform:uppercase}
@@ -371,6 +373,7 @@ footer{background:var(--green-forest);color:rgba(255,255,255,.72);position:relat
 .foot-watermark{position:absolute;inset-block-end:-4%;inset-inline-end:2%;font-family:var(--font-head);font-weight:800;font-size:clamp(90px,20vw,260px);color:rgba(255,255,255,.03);line-height:.7;pointer-events:none;letter-spacing:-.04em}
 .foot-inner{position:relative;z-index:2;max-width:var(--maxw);margin-inline:auto;padding:clamp(56px,7vw,90px) var(--pad) 30px;display:grid;grid-template-columns:1.6fr 1fr 1fr 1.2fr;gap:40px}
 .foot-brand .brand{color:#fff;margin-bottom:18px}
+.foot-brand .brand .logo-mark{height:56px;width:auto;object-fit:contain}
 .foot-brand .brand .mark path{stroke:var(--green-bright)}
 .foot-brand p{font-size:.9rem;max-width:34ch;line-height:1.6}
 .foot-col h5{font-family:var(--font-head);font-weight:600;color:#fff;font-size:.82rem;letter-spacing:.1em;text-transform:uppercase;margin-bottom:16px}
@@ -481,13 +484,8 @@ body.ar .supply-hint svg{transform:scaleX(-1)}
 
 <!-- ============ LOADER ============ -->
 <div id="loader" role="status" aria-label="Loading">
-  <svg viewBox="0 0 96 80" aria-hidden="true">
-    <path class="arch" d="M14 68V42a10 10 0 0120 0v26"/>
-    <path class="arch" d="M38 68V30a12 12 0 0124 0v38"/>
-    <path class="arch" d="M64 68V20a13 13 0 0126 0v48"/>
-  </svg>
+  <img class="loader-logo" src="img/logo.png" alt="SHE" loading="eager" decoding="async">
   <div class="ld-word">SHE</div>
-  <div class="ld-sub">Saudi House of Expertise</div>
 </div>
 <script>(function(){var l=document.getElementById('loader');
 var h=function(){if(l){l.classList.add('hide');setTimeout(function(){l.classList.add('gone')},1000)}};
@@ -499,16 +497,7 @@ addEventListener('load',function(){setTimeout(h,600)});})();</script>
 <!-- ============ NAV ============ -->
 <header id="nav">
   <a href="#top" class="brand" aria-label="SHE — Saudi House of Expertise, home">
-    <svg class="mark" viewBox="0 0 48 40" aria-hidden="true">
-      <path d="M6 34V24a5 5 0 0110 0v10"/>
-      <path d="M19 34V17a6 6 0 0112 0v17"/>
-      <path d="M34 34V10a5.5 5.5 0 0111 0v24"/>
-    </svg>
-    <span class="wm">
-      <b>SHE</b>
-      <span class="en-only">Saudi House of Expertise</span>
-      <span class="ar-name ar-only">دار الخبرات السعودية</span>
-    </span>
+    <img class="logo-mark" src="img/logo.png" alt="SHE — Saudi House of Expertise" loading="eager" decoding="async" onerror="this.style.display='none'">
   </a>
   <nav class="nav-links" aria-label="Primary">
     <a href="#about" data-en="About" data-ar="من نحن">About</a>
@@ -882,10 +871,7 @@ addEventListener('load',function(){setTimeout(h,600)});})();</script>
   <div class="foot-inner">
     <div class="foot-brand">
       <a href="#top" class="brand">
-        <svg class="mark" viewBox="0 0 48 40" aria-hidden="true">
-          <path d="M6 34V24a5 5 0 0110 0v10"/><path d="M19 34V17a6 6 0 0112 0v17"/><path d="M34 34V10a5.5 5.5 0 0111 0v24"/>
-        </svg>
-        <span class="wm"><b>SHE</b><span class="ar-name" style="opacity:.75">دار الخبرات السعودية</span></span>
+        <img class="logo-mark" src="img/logo.png" alt="SHE — Saudi House of Expertise" loading="lazy" decoding="async" onerror="this.style.display='none'">
       </a>
       <p data-en="A Saudi-owned single-source supply &amp; procurement partner to the Kingdom since 1971." data-ar="شريك سعودي موحّد للتوريد والمشتريات في المملكة منذ عام ١٩٧١.">A Saudi-owned single-source supply &amp; procurement partner to the Kingdom since 1971.</p>
     </div>
