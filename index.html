@@ -113,7 +113,8 @@ body.ar .btn-primary::before{transform:translateX(101%)}
 #loader.hide{opacity:0;visibility:hidden}
 #loader.gone{display:none}
 #loader svg{width:96px;height:80px}
-#loader .loader-logo{height:120px;width:auto;object-fit:contain;opacity:0;animation:fadeUp .6s .2s var(--ease-in) forwards}
+#loader .loader-logo{height:120px;width:auto;object-fit:contain;opacity:0;animation:fadeUp .6s .2s var(--ease-in) forwards;margin-bottom:22px;position:relative}
+#loader .loader-logo::after{content:"";position:absolute;bottom:-14px;inset-inline:0;height:1px;background:linear-gradient(to right,transparent,rgba(255,255,255,.4),transparent);animation:fadeUp .6s .3s var(--ease-in) forwards;opacity:0}
 #loader .arch{
   fill:none;stroke:var(--green-bright);stroke-width:3.4;stroke-linecap:round;
   stroke-dasharray:120;stroke-dashoffset:120;animation:draw 1.5s var(--ease-in) forwards;
@@ -181,10 +182,10 @@ body.ar #mmenu{transform:translateX(-100%)}
 @keyframes heroZoom{from{transform:scale(1.12)}to{transform:scale(1)}}
 .hero-scrim{position:absolute;inset:0;z-index:-1;
   background:
-    linear-gradient(105deg,rgba(6,46,24,.94) 0%,rgba(10,77,40,.78) 42%,rgba(6,46,24,.35) 100%),
+    linear-gradient(105deg,rgba(6,46,24,.35) 0%,rgba(10,77,40,.78) 58%,rgba(6,46,24,.94) 100%),
     radial-gradient(120% 90% at 100% 100%,rgba(27,168,74,.28),transparent 60%);
 }
-body.ar .hero-scrim{background:linear-gradient(255deg,rgba(6,46,24,.94) 0%,rgba(10,77,40,.78) 42%,rgba(6,46,24,.35) 100%),radial-gradient(120% 90% at 0% 100%,rgba(27,168,74,.28),transparent 60%)}
+body.ar .hero-scrim{background:linear-gradient(255deg,rgba(6,46,24,.35) 0%,rgba(10,77,40,.78) 58%,rgba(6,46,24,.94) 100%),radial-gradient(120% 90% at 0% 100%,rgba(27,168,74,.28),transparent 60%)}
 .hero-inner{max-width:900px;color:#fff}
 .hero-inner .eyebrow{color:#fff}
 .hero-inner .eyebrow::before{background:var(--green-bright)}
@@ -228,6 +229,15 @@ body.ar .hero-scrim{background:linear-gradient(255deg,rgba(6,46,24,.94) 0%,rgba(
 .about-media .badge{position:absolute;inset-block-end:-26px;inset-inline-start:-26px;background:var(--green-bright);color:#fff;border-radius:14px;padding:20px 24px;box-shadow:0 24px 50px -20px rgba(27,168,74,.7)}
 .about-media .badge b{font-family:var(--font-head);font-size:2.4rem;font-weight:800;line-height:1;display:block}
 .about-media .badge span{font-size:.76rem;letter-spacing:.1em;text-transform:uppercase;opacity:.9}
+
+/* ============ OUR TEAM ============ */
+#team{background:var(--paper-2)}
+.team-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(36px,5vw,72px);align-items:center}
+.team-copy h2{margin-bottom:18px}
+.team-copy p{margin-top:18px;color:var(--ink-soft);font-size:1.03rem}
+.team-media{position:relative}
+.team-media .frame{position:relative;border-radius:var(--r);overflow:hidden;aspect-ratio:4/5;box-shadow:0 40px 80px -40px rgba(6,46,24,.5)}
+.team-media .frame img{width:100%;height:100%;object-fit:cover;position:relative;z-index:1}
 
 .timeline{margin-top:clamp(56px,7vw,90px)}
 .tl-track{position:relative;display:grid;grid-template-columns:repeat(4,1fr);gap:24px;margin-top:40px}
@@ -436,6 +446,12 @@ body.ar .project-card h4{font-family:'IBM Plex Sans Arabic'}
 .supply-hint svg{width:24px;color:var(--green-bright);animation:nudge 1.8s var(--ease-hover) infinite}
 body.ar .supply-hint svg{transform:scaleX(-1)}
 @keyframes nudge{0%,100%{transform:translateX(0)}50%{transform:translateX(6px)}}
+.cta-card{background:linear-gradient(135deg,var(--green-bright),var(--green)) !important;color:#fff;display:flex;align-items:center;justify-content:center !important;cursor:default;border:0 !important}
+.cta-card:hover{transform:none !important;box-shadow:0 30px 60px -30px rgba(27,168,74,.8) !important}
+.cta-inner{text-align:center;width:100%}
+.cta-inner h3{color:#fff;margin-bottom:12px}
+.cta-inner p{color:rgba(255,255,255,.85);font-size:.95rem;margin-bottom:20px}
+.cta-inner .btn{width:auto}
 
 /* ============ RESPONSIVE ============ */
 @media(max-width:960px){
@@ -444,6 +460,8 @@ body.ar .supply-hint svg{transform:scaleX(-1)}
   .burger{display:flex}
   .about-grid{grid-template-columns:1fr;gap:44px}
   .about-media{max-width:400px;margin-inline:auto}
+  .team-grid{grid-template-columns:1fr;gap:44px}
+  .team-media{max-width:400px;margin-inline:auto}
   .stats-grid{grid-template-columns:repeat(2,1fr);gap:34px 24px}
   .supply-grid{grid-template-columns:repeat(2,1fr)}
   .proc-grid{grid-template-columns:repeat(2,1fr);gap:30px}
@@ -581,21 +599,6 @@ addEventListener('load',function(){setTimeout(h,600)});})();</script>
       <h2 class="h-lg reveal d1" style="margin-top:18px" data-en="A Saudi-owned house of expertise, built over five decades." data-ar="بيت خبرة سعودي، بُني على مدى خمسة عقود.">A Saudi-owned house of expertise, built over five decades.</h2>
       <p class="lead reveal d1" data-en="Founded in 1971 and headquartered in Riyadh, Saudi House of Expertise (SHE) is a single-source procurement and supply partner to businesses, projects and institutions across the Kingdom." data-ar="تأسست عام ١٩٧١ ومقرها الرياض، دار الخبرات السعودية (SHE) شريك موحّد للمشتريات والتوريد للأعمال والمشاريع والمؤسسات في جميع أنحاء المملكة.">Founded in 1971 and headquartered in Riyadh, Saudi House of Expertise (SHE) is a single-source procurement and supply partner to businesses, projects and institutions across the Kingdom.</p>
       <p class="reveal d2" data-en="We source and supply high-quality materials and equipment from reputed local and international manufacturers, with a proven track record of prompt, efficient, nationwide service. We manage the supply chain from start to end — so our clients deal with one accountable partner, not a dozen vendors." data-ar="نوفّر ونورّد مواد ومعدات عالية الجودة من مصنّعين محليين ودوليين مرموقين، بسجل حافل من الخدمة السريعة والفعّالة على مستوى المملكة. ندير سلسلة التوريد من البداية إلى النهاية — ليتعامل عملاؤنا مع شريك واحد مسؤول، لا مع عشرات المورّدين.">We source and supply high-quality materials and equipment from reputed local and international manufacturers, with a proven track record of prompt, efficient, nationwide service. We manage the supply chain from start to end — so our clients deal with one accountable partner, not a dozen vendors.</p>
-      <p class="reveal d2" style="color:var(--ink);font-weight:500" data-en="Our team is multi-disciplinary by design:" data-ar="فريقنا متعدد التخصصات بحكم تكوينه:">Our team is multi-disciplinary by design:</p>
-      <div class="expert-tags reveal d3">
-        <span class="tag" data-en="Engineers" data-ar="مهندسون">Engineers</span>
-        <span class="tag" data-en="Safety experts" data-ar="خبراء سلامة">Safety experts</span>
-        <span class="tag" data-en="Backup-power engineers" data-ar="مهندسو الطاقة الاحتياطية">Backup-power engineers</span>
-        <span class="tag" data-en="Food experts" data-ar="خبراء أغذية">Food experts</span>
-        <span class="tag" data-en="Pharmacists" data-ar="صيادلة">Pharmacists</span>
-      </div>
-    </div>
-    <div class="about-media reveal d1">
-      <div class="frame">
-        <div class="ph" style="position:absolute;inset:0"></div>
-        <img src="img/riyadh.jpg" alt="Riyadh skyline — SHE's home since 1971" loading="lazy" decoding="async" onerror="mediaFallback(this,'Riyadh, KSA')">
-      </div>
-      <div class="badge"><b>54<span style="font-size:1.3rem">+</span></b><span data-en="Years in the Kingdom" data-ar="عاماً في المملكة">Years in the Kingdom</span></div>
     </div>
   </div>
 
@@ -647,7 +650,7 @@ addEventListener('load',function(){setTimeout(h,600)});})();</script>
 <!-- ============ WHO WE'VE WORKED WITH (CLIENTS) ============ -->
 <section id="clients" class="section-wide">
   <div style="max-width:var(--maxw);margin-inline:auto;padding-inline:var(--pad)">
-    <div class="eyebrow reveal" data-en="03 — Who We've Worked With" data-ar="٠٣ — من عملنا معهم">03 — Who We've Worked With</div>
+    <div class="eyebrow reveal" data-en="03 — Our Clients &amp; Partners" data-ar="٠٣ — عملاؤنا وشركاؤنا">03 — Our Clients &amp; Partners</div>
     <h2 class="h-lg reveal d1" style="margin-top:16px;max-width:22ch" data-en="Trusted alongside the Kingdom's leading contractors." data-ar="موضع ثقة إلى جانب كبرى شركات المقاولات في المملكة.">Trusted alongside the Kingdom's leading contractors.</h2>
     <p class="lead reveal d2" style="max-width:54ch" data-en="We've supplied and partnered with major contractors and groups delivering Saudi Arabia's most important projects." data-ar="قمنا بالتوريد والشراكة مع كبرى شركات المقاولات والمجموعات التي تنفّذ أهم مشاريع المملكة.">We've supplied and partnered with major contractors and groups delivering Saudi Arabia's most important projects.</p>
   </div>
@@ -657,19 +660,42 @@ addEventListener('load',function(){setTimeout(h,600)});})();</script>
   </div>
 </section>
 
+<!-- ============ OUR TEAM ============ -->
+<section id="team" class="section">
+  <div class="team-grid">
+    <div class="team-copy">
+      <h2 class="h-lg reveal d1" style="max-width:24ch" data-en="Our multidisciplinary team" data-ar="فريقنا متعدد التخصصات">Our multidisciplinary team</h2>
+      <p class="reveal d2" style="color:var(--ink);font-weight:500" data-en="Our team is multi-disciplinary by design:" data-ar="فريقنا متعدد التخصصات بحكم تكوينه:">Our team is multi-disciplinary by design:</p>
+      <div class="expert-tags reveal d3">
+        <span class="tag" data-en="Engineers" data-ar="مهندسون">Engineers</span>
+        <span class="tag" data-en="Safety experts" data-ar="خبراء سلامة">Safety experts</span>
+        <span class="tag" data-en="Backup-power engineers" data-ar="مهندسو الطاقة الاحتياطية">Backup-power engineers</span>
+        <span class="tag" data-en="Food experts" data-ar="خبراء أغذية">Food experts</span>
+        <span class="tag" data-en="Pharmacists" data-ar="صيادلة">Pharmacists</span>
+      </div>
+    </div>
+    <div class="team-media reveal d1">
+      <div class="frame">
+        <div class="ph" style="position:absolute;inset:0"></div>
+        <img src="img/riyadh.jpg" alt="Riyadh skyline — SHE's home since 1971" loading="lazy" decoding="async" onerror="mediaFallback(this,'Riyadh, KSA')">
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- ============ WHAT WE SUPPLY ============ -->
 <section id="supply" class="section-wide">
   <div style="max-width:var(--maxw);margin-inline:auto;padding-inline:var(--pad)">
     <div class="supply-head">
       <div>
-        <div class="eyebrow reveal" data-en="04 — What We Supply" data-ar="٠٤ — ما نورّده">04 — What We Supply</div>
-        <h2 class="h-lg reveal d1" style="margin-top:16px" data-en="Twelve product lines. One point of contact." data-ar="اثنا عشر خط منتجات. نقطة اتصال واحدة.">Twelve product lines. One point of contact.</h2>
+        <div class="eyebrow reveal" data-en="05 — What We Supply" data-ar="٠٥ — ما نورّده">05 — What We Supply</div>
+        <h2 class="h-lg reveal d1" style="margin-top:16px" data-en="Product lines. One point of contact." data-ar="خطوط المنتجات. نقطة اتصال واحدة.">Product lines. One point of contact.</h2>
       </div>
       <p class="lead reveal d2" style="max-width:34ch" data-en="Swipe through the lines — they scroll on their own. Everything is sourced, quality-checked and delivered by SHE." data-ar="اسحب عبر الخطوط — تتحرّك تلقائياً. كل شيء يتم توفيره وفحص جودته وتسليمه بواسطة SHE.">Swipe through the lines — they scroll on their own. Everything is sourced, quality-checked and delivered by SHE.</p>
     </div>
     <div class="supply-hint reveal" aria-hidden="true">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-      <span data-en="Drag or swipe to explore all twelve" data-ar="اسحب لاستكشاف جميع الخطوط الاثني عشر">Drag or swipe to explore all twelve</span>
+      <span data-en="Drag or swipe to explore" data-ar="اسحب لاستكشاف">Drag or swipe to explore</span>
     </div>
     <div class="supply-carousel">
       <div class="supply-track" id="supplyGrid"></div>
@@ -679,7 +705,7 @@ addEventListener('load',function(){setTimeout(h,600)});})();</script>
 
 <!-- ============ HOW WE WORK ============ -->
 <section id="process" class="section">
-  <div class="eyebrow reveal" data-en="05 — How We Work" data-ar="٠٥ — كيف نعمل">05 — How We Work</div>
+  <div class="eyebrow reveal" data-en="06 — How We Work" data-ar="٠٦ — كيف نعمل">06 — How We Work</div>
   <h2 class="h-lg reveal d1" style="margin-top:16px;max-width:20ch" data-en="A managed supply chain, from source to site." data-ar="سلسلة توريد مُدارة، من المصدر إلى الموقع.">A managed supply chain, from source to site.</h2>
   <div class="proc-grid">
     <div class="proc-step reveal d1">
@@ -711,7 +737,7 @@ addEventListener('load',function(){setTimeout(h,600)});})();</script>
 <!-- ============ SECTORS ============ -->
 <section id="sectors" class="section-wide">
   <div style="max-width:var(--maxw);margin-inline:auto;padding-inline:var(--pad)">
-    <div class="eyebrow reveal" data-en="06 — Sectors We Serve" data-ar="٠٦ — القطاعات التي نخدمها">06 — Sectors We Serve</div>
+    <div class="eyebrow reveal" data-en="07 — Sectors We Serve" data-ar="٠٧ — القطاعات التي نخدمها">07 — Sectors We Serve</div>
     <h2 class="h-lg reveal d1" style="margin-top:16px;max-width:22ch" data-en="Trusted by the sectors that build the Kingdom." data-ar="موضع ثقة القطاعات التي تبني المملكة.">Trusted by the sectors that build the Kingdom.</h2>
     <div class="sector-grid" id="sectorGrid"></div>
   </div>
@@ -719,7 +745,7 @@ addEventListener('load',function(){setTimeout(h,600)});})();</script>
 
 <!-- ============ WHY SHE ============ -->
 <section class="section">
-  <div class="eyebrow reveal" data-en="07 — Why SHE" data-ar="٠٧ — لماذا SHE">07 — Why SHE</div>
+  <div class="eyebrow reveal" data-en="08 — Why SHE" data-ar="٠٨ — لماذا SHE">08 — Why SHE</div>
   <h2 class="h-lg reveal d1" style="margin-top:16px;max-width:20ch" data-en="Confidence through specificity, not slogans." data-ar="ثقة قائمة على التحديد، لا على الشعارات.">Confidence through specificity, not slogans.</h2>
   <div class="why-grid" id="whyGrid"></div>
 </section>
@@ -728,7 +754,7 @@ addEventListener('load',function(){setTimeout(h,600)});})();</script>
 <section id="mission">
   <div class="authority-img"><img src="img/authority.jpg" alt="" aria-hidden="true" loading="lazy" decoding="async" onerror="this.style.display='none'"></div>
   <div class="inner">
-    <div class="eyebrow reveal" data-en="08 — Mission &amp; Values" data-ar="٠٨ — رسالتنا وقيمنا">08 — Mission &amp; Values</div>
+    <div class="eyebrow reveal" data-en="09 — Mission &amp; Values" data-ar="٠٩ — رسالتنا وقيمنا">09 — Mission &amp; Values</div>
     <h2 class="h-lg reveal d1" style="margin-top:16px;max-width:24ch" data-en="What we hold ourselves to." data-ar="ما نلتزم به تجاه عملائنا.">What we hold ourselves to.</h2>
     <div class="mvv">
       <div class="card reveal d1">
@@ -1029,6 +1055,15 @@ function renderSupply(){
     c.addEventListener('click',function(){c.classList.toggle('open');});
     g.appendChild(c);
   });
+  // Add 13th CTA card
+  var cta=el('div','supply-card cta-card',
+    '<div class="cta-inner">'+
+    '<h3 data-en="Need something else?" data-ar="هل تحتاج إلى شيء آخر؟">Need something else?</h3>'+
+    '<p data-en="Let\'s talk about your requirements." data-ar="دعنا نتحدث عن احتياجاتك.">Let\'s talk about your requirements.</p>'+
+    '<a href="#contact" class="btn btn-primary" data-en="Contact Us" data-ar="اتصل بنا">Contact Us'+
+    '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>'+
+    '</div>');
+  g.appendChild(cta);
 }
 function renderSectors(){
   var g=document.getElementById('sectorGrid'); if(!g)return; g.innerHTML='';
