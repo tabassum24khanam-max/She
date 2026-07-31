@@ -114,7 +114,8 @@ body.ar .btn-primary::before{transform:translateX(101%)}
 #loader.gone{display:none}
 #loader svg{width:96px;height:80px}
 #loader .loader-logo{height:120px;width:auto;object-fit:contain;opacity:0;animation:fadeUp .6s .2s var(--ease-in) forwards;margin-bottom:22px;position:relative}
-#loader .loader-logo::after{content:"";position:absolute;bottom:-14px;inset-inline:0;height:1px;background:linear-gradient(to right,transparent,rgba(255,255,255,.4),transparent);animation:fadeUp .6s .3s var(--ease-in) forwards;opacity:0}
+#loader .loader-logo::before{content:"";position:absolute;inset:-20px;background:rgba(255,255,255,.92);border-radius:50%;z-index:-1;animation:fadeUp .6s .2s var(--ease-in) forwards;opacity:0}
+#loader .loader-logo::after{content:"";position:absolute;bottom:-28px;inset-inline:0;height:2px;background:#fff;animation:fadeUp .6s .3s var(--ease-in) forwards;opacity:0;width:200%;inset-inline-start:-50%}
 #loader .arch{
   fill:none;stroke:var(--green-bright);stroke-width:3.4;stroke-linecap:round;
   stroke-dasharray:120;stroke-dashoffset:120;animation:draw 1.5s var(--ease-in) forwards;
