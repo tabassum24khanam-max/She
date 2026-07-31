@@ -1100,6 +1100,21 @@ function renderClients(){
   if(r1){ var s1=CLIENTS.map(tile).join(''); r1.innerHTML=s1+s1; }
   if(r2){ var rev=CLIENTS.slice().reverse().map(tile).join(''); r2.innerHTML=rev+rev; }
 }
+function initMarqueeClick(){
+  var mask=document.querySelector('.marquee-mask'); if(!mask)return;
+  var pausing=false, resumeTimer=null;
+  mask.addEventListener('click',function(){
+    if(pausing)return;
+    pausing=true;
+    var rows=mask.querySelectorAll('.marquee-row');
+    rows.forEach(function(r){r.style.animationPlayState='paused';});
+    clearTimeout(resumeTimer);
+    resumeTimer=setTimeout(function(){
+      rows.forEach(function(r){r.style.animationPlayState='running';});
+      pausing=false;
+    },3000);
+  });
+}
 function initSupplyCarousel(){
   var t=document.getElementById('supplyGrid'); if(!t)return;
   // drag-to-scroll (pointer)
@@ -1267,7 +1282,7 @@ function boot(){
   renderSupply(); renderProjects(); renderClients(); renderSectors(); renderWhy(); renderFootLines(); renderSelect();
   observeAll('.reveal');
   observe(document.getElementById('stats'));
-  initUI(); initForm(); initCursor(); initSupplyCarousel();
+  initUI(); initForm(); initCursor(); initSupplyCarousel(); initMarqueeClick();
   var saved=null; try{saved=localStorage.getItem('she_lang');}catch(e){}
   applyLang(saved==='ar'?'ar':'en');
 }
