@@ -213,6 +213,18 @@ body.ar .hero-scrim{background:linear-gradient(255deg,rgba(6,46,24,.35) 0%,rgba(
 .stat b .plus{color:var(--green-bright)}
 .stat span{display:block;margin-top:10px;font-size:.82rem;color:rgba(255,255,255,.66);letter-spacing:.04em;text-transform:uppercase;font-family:var(--font-head);font-weight:500}
 
+/* ============ QUICK CONTACT ============ */
+.quick-contact{background:var(--green);color:#fff;overflow:hidden}
+.qc-inner{max-width:var(--maxw);margin-inline:auto;padding:clamp(40px,5vw,60px) var(--pad);text-align:center}
+.qc-inner h3{font-family:var(--font-head);font-weight:700;font-size:clamp(24px,3vw,36px);margin-bottom:32px}
+.qc-methods{display:flex;gap:24px;justify-content:center;flex-wrap:wrap}
+.qc-method{display:inline-flex;align-items:center;gap:16px;padding:18px 24px;background:rgba(255,255,255,.1);border-radius:12px;color:#fff;text-decoration:none;transition:background .3s,transform .3s}
+.qc-method:hover{background:rgba(255,255,255,.15);transform:translateY(-2px)}
+.qc-method svg{width:32px;height:32px;flex:none}
+.qc-method div{text-align:left}
+.qc-method span{display:block;font-size:.85rem;opacity:.9}
+.qc-method span:last-child{font-size:1rem;opacity:1}
+
 /* ============ REVEAL ============ */
 .reveal{opacity:0;transform:translateY(26px);transition:opacity .7s var(--ease-in),transform .7s var(--ease-in)}
 .reveal.vis{opacity:1;transform:none}
@@ -587,8 +599,25 @@ addEventListener('load',function(){setTimeout(h,600)});})();</script>
   <div class="stats-grid">
     <div class="stat"><b data-count="1971" data-plain="1">1971</b><span data-en="Year founded" data-ar="سنة التأسيس">Year founded</span></div>
     <div class="stat"><b><span data-count="54">54</span><span class="plus">+</span></b><span data-en="Years of service" data-ar="عاماً من الخدمة">Years of service</span></div>
-    <div class="stat"><b data-count="12">12</b><span data-en="Product lines" data-ar="خطوط منتجات">Product lines</span></div>
+    <div class="stat"><span data-en="Product lines" data-ar="خطوط منتجات">Product lines</span></div>
     <div class="stat"><b data-en="Nationwide" data-ar="وطنية">Nationwide</b><span data-en="Delivery coverage" data-ar="تغطية التسليم">Delivery coverage</span></div>
+  </div>
+</section>
+
+<!-- ============ QUICK CONTACT ============ -->
+<section class="quick-contact">
+  <div class="qc-inner">
+    <h3 data-en="Get in touch" data-ar="تواصل معنا">Get in touch</h3>
+    <div class="qc-methods">
+      <a href="mailto:zubairceo@gmail.com" class="qc-method">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16a2 2 0 012 2v12a2 2 0 01-2 2H4a2 2 0 01-2-2V6a2 2 0 012-2z"/><path d="M22 6l-10 7L2 6"/></svg>
+        <div><span data-en="Email" data-ar="البريد الإلكتروني">Email</span><br><span style="font-weight:500">zubairceo@gmail.com</span></div>
+      </a>
+      <a href="tel:+966114644480" class="qc-method">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 01-2.2 2 19.8 19.8 0 01-8.6-3 19.5 19.5 0 01-6-6 19.8 19.8 0 01-3-8.6A2 2 0 014.1 2h3a2 2 0 012 1.7c.1.9.4 1.8.7 2.7a2 2 0 01-.5 2.1L8.1 9.9a16 16 0 006 6l1.4-1.2a2 2 0 012.1-.5c.9.3 1.8.6 2.7.7a2 2 0 011.7 2z"/></svg>
+        <div><span data-en="Phone" data-ar="الهاتف">Phone</span><br><span style="font-weight:500">+966 11 464 4480</span></div>
+      </a>
+    </div>
   </div>
 </section>
 
@@ -873,7 +902,7 @@ addEventListener('load',function(){setTimeout(h,600)});})();</script>
           <div class="ii"><svg viewBox="0 0 24 24"><path d="M4 4h16a2 2 0 012 2v12a2 2 0 01-2 2H4a2 2 0 01-2-2V6a2 2 0 012-2z"/><path d="M22 6l-10 7L2 6"/></svg></div>
           <div>
             <div class="it" data-en="Email &amp; Web" data-ar="البريد والموقع">Email &amp; Web</div>
-            <div class="iv"><a href="mailto:zubairceo@gmail.com">zubairceo@gmail.com</a><br><a href="https://www.she.sa.com" target="_blank" rel="noopener">www.she.sa.com</a></div>
+            <div class="iv"><a href="mailto:zubairceo@gmail.com">zubairceo@gmail.com</a><br><a href="https://sa-she.com" target="_blank" rel="noopener">sa-she.com</a></div>
           </div>
         </div>
         <div class="info-block" style="border-bottom:0">
@@ -1043,11 +1072,9 @@ function txt(node){return LANG==='ar'?node.ar:node.en;}
 function renderSupply(){
   var g=document.getElementById('supplyGrid'); if(!g)return; g.innerHTML='';
   SUPPLY.forEach(function(s,i){
-    var n=('0'+(i+1)).slice(-2);
     var subs=s.subs.map(function(x){return '<span>'+x+'</span>';}).join('');
     var c=el('div','supply-card',
       '<svg class="arch-tab" viewBox="0 0 48 40" fill="none" stroke="currentColor" stroke-width="3"><path d="M6 34V24a5 5 0 0110 0v10"/><path d="M19 34V17a6 6 0 0112 0v17"/><path d="M34 34V10a5.5 5.5 0 0111 0v24"/></svg>'+
-      '<div class="num">'+n+'</div>'+
       '<div class="ico">'+s.ico+'</div>'+
       '<h3 data-en="'+s.en+'" data-ar="'+s.ar+'">'+s.en+'</h3>'+
       '<div class="t-ar" data-en="'+s.ar+'" data-ar="'+s.en+'">'+s.ar+'</div>'+
