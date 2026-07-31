@@ -420,8 +420,8 @@ body.ar .project-card h4{font-family:'IBM Plex Sans Arabic'}
 @keyframes scrollx{from{transform:translateX(0)}to{transform:translateX(-50%)}}
 .client-tile{flex:none;width:184px;height:98px;background:#fff;border:1px solid var(--line);border-radius:12px;display:flex;align-items:center;justify-content:center;padding:16px 22px;transition:box-shadow .3s,transform .3s}
 .client-tile:hover{box-shadow:0 16px 34px -22px rgba(6,46,24,.5);transform:translateY(-3px)}
-.client-tile img{max-width:100%;max-height:100%;object-fit:contain;filter:grayscale(1) opacity(.7);transition:filter .35s}
-.client-tile:hover img{filter:grayscale(0) opacity(1)}
+.client-tile img{max-width:100%;max-height:100%;object-fit:contain;transition:transform .35s}
+.client-tile:hover img{transform:scale(1.05)}
 
 /* ============ SUPPLY CAROUSEL ============ */
 .supply-carousel{position:relative;margin-top:44px}
